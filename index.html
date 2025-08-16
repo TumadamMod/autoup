@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ký IPA - tumadam</title>
+    <title>Upload IPA - Vthangios.vn</title>
     
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -101,46 +101,6 @@
         }
         .nu-button:active {
             transform: translateY(0);
-        }
-        
-        /* Step animations */
-        .step-container {
-            opacity: 0.3;
-            transform: translateY(20px);
-            transition: all 0.5s ease;
-            pointer-events: none;
-        }
-        .step-container.active {
-            opacity: 1;
-            transform: translateY(0);
-            pointer-events: auto;
-        }
-        .step-container.completed {
-            opacity: 0.8;
-            transform: translateY(0);
-            pointer-events: auto;
-        }
-        
-        .step-number {
-            transition: all 0.3s ease;
-        }
-        .step-number.completed {
-            background: linear-gradient(135deg, #10b981, #059669) !important;
-            transform: scale(1.1);
-        }
-        .step-number.active {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
-        }
-        
-        .progress-line {
-            height: 2px;
-            background: linear-gradient(90deg, #334155, #334155);
-            transition: all 0.8s ease;
-            margin: 1rem 0;
-        }
-        .progress-line.completed {
-            background: linear-gradient(90deg, #06b6d4, #0891b2);
         }
         
         .file-selected {
@@ -252,16 +212,16 @@
                         <div class="flex items-center gap-3">
                             <div class="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-cyan-500 to-sky-500 rounded-lg flex items-center justify-center shadow-lg shadow-cyan-500/25">
                                 <svg class="w-4 h-4 md:w-5 md:h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                                    <circle cx="12" cy="16" r="1"/>
-                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="17,8 12,3 7,8"/>
+                                    <line x1="12" y1="3" x2="12" y2="15"/>
                                 </svg>
                             </div>
                             <div>
                                 <h1 class="text-lg md:text-xl font-bold bg-gradient-to-r from-cyan-400 to-sky-400 bg-clip-text text-transparent">
                                     Vthangios.vn
                                 </h1>
-                                <p class="text-xs text-slate-400">IPA Signing Service</p>
+                                <p class="text-xs text-slate-400">IPA Upload Service</p>
                             </div>
                         </div>
                         
@@ -269,15 +229,15 @@
                         <div class="flex items-center gap-2 md:gap-3">
                             
                             
-                            <a href="/upload" 
+                            <a href="/" 
                                class="flex items-center gap-2 px-3 md:px-4 py-2 bg-slate-700/50 hover:bg-slate-600/50 text-white rounded-lg transition-all duration-300 hover:scale-105 text-sm font-medium">
                                 <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                                    <polyline points="17,8 12,3 7,8"/>
-                                    <line x1="12" y1="3" x2="12" y2="15"/>
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                    <circle cx="12" cy="16" r="1"/>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
                                 </svg>
-                                <span class="hidden sm:inline">Upload IPA</span>
-                                <span class="sm:hidden">Upload</span>
+                                <span class="hidden sm:inline">Ký IPA</span>
+                                <span class="sm:hidden">Signing</span>
                             </a>
                         </div>
                     </div>
@@ -288,18 +248,18 @@
             <header class="text-center py-4 md:py-6 animate-nu-fade-in">
                 <div class="inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-cyan-500 to-sky-500 rounded-xl mb-3 shadow-xl shadow-cyan-500/25">
                     <svg class="w-6 h-6 md:w-7 md:h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                        <circle cx="12" cy="16" r="1"/>
-                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="17,8 12,3 7,8"/>
+                        <line x1="12" y1="3" x2="12" y2="15"/>
                     </svg>
                 </div>
                 <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-sky-400 bg-clip-text text-transparent mb-2">
-                    Ký IPA Ứng Dụng
+                    Upload IPA
                 </h1>
-                <p class="text-slate-400 text-sm md:text-base">Ký ứng dụng iOS với chứng chỉ và profile của bạn</p>
+                <p class="text-slate-400 text-sm md:text-base">Tải lên và xử lý file IPA của bạn</p>
             </header>
 
-            <!-- Main Signing Card -->
+            <!-- Main Upload Card -->
             <div class="group relative animate-nu-fade-in">
                 <div class="relative overflow-hidden rounded-xl md:rounded-2xl shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-cyan-500/10 nu-card">
                     <!-- Glow orbs -->
@@ -307,550 +267,338 @@
                     <div class="glow-orb glow-orb-2 group-hover:scale-150 group-hover:opacity-70"></div>
                     
                     <div class="relative p-4 md:p-6">
-                        <h2 class="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6 text-center">Quy Trình Ký Ứng Dụng</h2>
-                        
-                        <!-- Progress Overview - Hidden on mobile -->
-                        <div class="hidden md:flex items-center justify-center mb-8">
-                            <div class="flex items-center space-x-4">
-                                <div id="step1-indicator" class="w-3 h-3 rounded-full bg-cyan-500 shadow-lg shadow-cyan-500/50"></div>
-                                <div class="progress-line w-12" id="progress1"></div>
-                                <div id="step2-indicator" class="w-3 h-3 rounded-full bg-slate-600"></div>
-                                <div class="progress-line w-12" id="progress2"></div>
-                                <div id="step3-indicator" class="w-3 h-3 rounded-full bg-slate-600"></div>
-                                <div class="progress-line w-12" id="progress3"></div>
-                                <div id="step4-indicator" class="w-3 h-3 rounded-full bg-slate-600"></div>
-                                <div class="progress-line w-12" id="progress4"></div>
-                                <div id="step5-indicator" class="w-3 h-3 rounded-full bg-slate-600"></div>
-                            </div>
-                        </div>
-                
-                        <!-- Step 1: Upload IPA -->
-                        <div class="step-container active mb-4 md:mb-6" id="step1">
-                            <div class="step-card rounded-lg md:rounded-xl p-4 md:p-5">
-                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 md:mb-5">
-                                    <div class="flex items-center mb-3 sm:mb-0">
-                                        <div class="step-number w-8 h-8 md:w-10 md:h-10 bg-cyan-500 text-white rounded-full flex items-center justify-center text-xs md:text-sm font-bold mr-3 active shadow-lg shadow-cyan-500/25">1</div>
-                                        <div>
-                                            <h3 class="text-base md:text-lg font-semibold text-white">Tải lên file IPA</h3>
-                                            <p class="text-slate-400 text-xs md:text-sm">Chọn file ứng dụng IPA cần ký</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="group/dropzone">
-                                    <div class="relative rounded-lg border-2 border-dashed border-slate-700 bg-slate-900/50 p-4 md:p-6 transition-colors group-hover/dropzone:border-cyan-500/50">
-                                        <input type="file" 
-                                               id="ipaUpload" 
-                                               accept=".ipa"
-                                               class="absolute inset-0 z-50 h-full w-full cursor-pointer opacity-0">
-                                        <div class="space-y-3 text-center">
-                                            <div class="mx-auto flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-slate-800">
-                                                <svg class="h-5 w-5 md:h-6 md:w-6 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                                                    <polyline points="17,8 12,3 7,8"/>
-                                                    <line x1="12" y1="3" x2="12" y2="15"/>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <p class="text-sm md:text-base font-medium text-white">Kéo thả file IPA hoặc nhấn để chọn</p>
-                                                <p class="text-xs md:text-sm text-slate-400">Hỗ trợ file: .ipa</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div id="ipaFileInfo" class="mt-3 hidden">
-                                    <div class="rounded-lg bg-slate-900/50 p-3">
-                                        <div class="flex items-center gap-3">
-                                            <div class="file-icon rounded-lg p-2">
-                                                <svg class="h-4 w-4 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                                                    <line x1="8" y1="21" x2="16" y2="21"/>
-                                                    <line x1="12" y1="17" x2="12" y2="21"/>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <p class="font-medium text-white text-sm" id="ipaFileName"></p>
-                                                <p class="text-xs text-slate-400">IPA File</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Step 2: Upload Certificate -->
-                        <div class="step-container mb-4 md:mb-6" id="step2">
-                            <div class="step-card rounded-lg md:rounded-xl p-4 md:p-5">
-                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 md:mb-5">
-                                    <div class="flex items-center mb-3 sm:mb-0">
-                                        <div class="step-number w-8 h-8 md:w-10 md:h-10 bg-purple-500 text-white rounded-full flex items-center justify-center text-xs md:text-sm font-bold mr-3">2</div>
-                                        <div>
-                                            <h3 class="text-base md:text-lg font-semibold text-white">Tải lên chứng chỉ</h3>
-                                            <p class="text-slate-400 text-xs md:text-sm">Chọn file chứng chỉ .p12 để ký ứng dụng</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="group/dropzone">
-                                    <div class="relative rounded-lg border-2 border-dashed border-slate-700 bg-slate-900/50 p-4 md:p-6 transition-colors group-hover/dropzone:border-purple-500/50">
-                                        <input type="file" 
-                                               id="certificateUpload" 
-                                               accept=".p12"
-                                               class="absolute inset-0 z-50 h-full w-full cursor-pointer opacity-0"
-                                               disabled>
-                                        <div class="space-y-3 text-center">
-                                            <div class="mx-auto flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-slate-800">
-                                                <svg class="h-5 w-5 md:h-6 md:w-6 text-purple-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                                                    <circle cx="12" cy="16" r="1"/>
-                                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <p class="text-sm md:text-base font-medium text-white">Kéo thả chứng chỉ .p12</p>
-                                                <p class="text-xs md:text-sm text-slate-400">Hỗ trợ file: .p12</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                <div id="certFileInfo" class="mt-3 hidden">
-                    <div class="rounded-lg bg-slate-900/50 p-3">
-                        <div class="flex items-center gap-3">
-                            <div class="file-icon rounded-lg p-2">
-                                <svg class="h-4 w-4 text-purple-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                                    <circle cx="12" cy="16" r="1"/>
-                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                                </svg>
-                            </div>
-                            <div class="flex-1">
-                                <p class="font-medium text-white text-sm" id="certFileName"></p>
-                                <p class="text-xs text-slate-400">Certificate P12</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>                        <!-- Step 3: Upload Provisioning Profile -->
-                        <div class="step-container mb-4 md:mb-6" id="step3">
-                            <div class="step-card rounded-lg md:rounded-xl p-4 md:p-5">
-                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 md:mb-5">
-                                    <div class="flex items-center mb-3 sm:mb-0">
-                                        <div class="step-number w-8 h-8 md:w-10 md:h-10 bg-sky-500 text-white rounded-full flex items-center justify-center text-xs md:text-sm font-bold mr-3">3</div>
-                                        <div>
-                                            <h3 class="text-base md:text-lg font-semibold text-white">Provisioning Profile</h3>
-                                            <p class="text-slate-400 text-xs md:text-sm">Tùy chọn - Profile cung cấp để phân phối ứng dụng</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="group/dropzone">
-                                    <div class="relative rounded-lg border-2 border-dashed border-slate-700 bg-slate-900/50 p-4 md:p-6 transition-colors group-hover/dropzone:border-sky-500/50">
-                                        <input type="file" 
-                                               id="provisioningUpload" 
-                                               accept=".mobileprovision"
-                                               class="absolute inset-0 z-50 h-full w-full cursor-pointer opacity-0"
-                                               disabled>
-                                        <div class="space-y-3 text-center">
-                                            <div class="mx-auto flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-slate-800">
-                                                <svg class="h-5 w-5 md:h-6 md:w-6 text-sky-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                                    <polyline points="14,2 14,8 20,8"/>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <p class="text-sm md:text-base font-medium text-white">Kéo thả provisioning profile</p>
-                                                <p class="text-xs md:text-sm text-slate-400">Hỗ trợ file: .mobileprovision</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div id="provisioningFileInfo" class="mt-3 hidden">
-                                    <div class="rounded-lg bg-slate-900/50 p-3">
-                                        <div class="flex items-center gap-3">
-                                            <div class="file-icon rounded-lg p-2">
-                                                <svg class="h-4 w-4 text-sky-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                                    <polyline points="14,2 14,8 20,8"/>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <p class="font-medium text-white text-sm" id="provisioningFileName"></p>
-                                                <p class="text-xs text-slate-400">Provisioning Profile</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <button id="skipProvisioning" class="mt-3 flex items-center gap-2 text-sky-400 font-medium hover:text-sky-300 transition-colors disabled:opacity-50 text-xs md:text-sm" disabled>
-                                    Bỏ qua bước này
-                                    <svg class="w-3 h-3 md:w-4 md:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="9,18 15,12 9,6"/>
+                        <!-- Upload Section -->
+                        <div id="uploadArea" 
+                             class="group/dropzone step-card rounded-lg md:rounded-xl p-6 md:p-8 text-center cursor-pointer mb-4 md:mb-6"
+                             onclick="document.getElementById('fileInput').click()">
+                            <div class="space-y-4 md:space-y-6">
+                                <div class="w-16 h-16 md:w-20 md:h-20 mx-auto bg-gradient-to-br from-cyan-500 to-sky-500 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/25">
+                                    <svg class="w-8 h-8 md:w-10 md:h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="17,8 12,3 7,8"/>
+                                        <line x1="12" y1="3" x2="12" y2="15"/>
                                     </svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Step 4: Enter Certificate Password -->
-                        <div class="step-container mb-4 md:mb-6" id="step4">
-                            <div class="step-card rounded-lg md:rounded-xl p-4 md:p-5">
-                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 md:mb-5">
-                                    <div class="flex items-center mb-3 sm:mb-0">
-                                        <div class="step-number w-8 h-8 md:w-10 md:h-10 bg-sky-500 text-white rounded-full flex items-center justify-center text-xs md:text-sm font-bold mr-3">4</div>
-                                        <div>
-                                            <h3 class="text-base md:text-lg font-semibold text-white">Mật khẩu Certificate</h3>
-                                            <p class="text-slate-400 text-xs md:text-sm">Nhập mật khẩu để giải mã file .p12</p>
-                                        </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg md:text-xl font-bold mb-2 text-white">Tải lên file IPA</h3>
+                                    <p class="text-slate-400 text-sm md:text-base mb-4">Chạm để chọn hoặc kéo thả file vào đây</p>
+                                    <div class="inline-flex items-center space-x-2 text-xs md:text-sm text-slate-300 bg-slate-800/50 px-3 py-2 rounded-full">
+                                        <svg class="w-3 h-3 md:w-4 md:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"/>
+                                            <path d="m9 12 2 2 4-4"/>
+                                        </svg>
+                                        <span>Tối đa 500MB • Chỉ file .ipa</span>
                                     </div>
+                                </div>
+                            </div>
+                            <input type="file" id="fileInput" accept=".ipa" class="hidden" />
+                        </div>
+                        
+                        <!-- Upload Progress -->
+                        <div id="progressSection" class="hidden">
+                            <div class="step-card rounded-lg md:rounded-xl p-4 md:p-5 mb-4 md:mb-6">
+                                <div class="text-center mb-4 md:mb-5">
+                                    <h2 class="text-lg md:text-xl font-bold text-white mb-2" id="progressTitle">Đang xử lý...</h2>
+                                    <p class="text-slate-400 text-sm" id="uploadFileName">filename.ipa</p>
                                 </div>
                                 
-                                <div class="space-y-3">
-                                    <div class="relative">
-                                        <input type="text" 
-                                               id="certificatePassword" 
-                                               placeholder="Nhập mật khẩu certificate"
-                                               class="w-full px-3 md:px-4 py-2 md:py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500/50 focus:border-sky-500 transition-all disabled:opacity-50 text-sm md:text-base"
-                                               disabled>
+                                <div class="space-y-4 md:space-y-5">
+                                    <!-- Overall Progress Bar -->
+                                    <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-3 md:p-4">
+                                        <div class="flex items-center justify-between mb-2 md:mb-3">
+                                            <span class="text-xs md:text-sm font-medium text-white" id="progressLabel">Bắt đầu xử lý</span>
+                                            <span class="text-xs md:text-sm text-slate-400" id="uploadPercent">0%</span>
+                                        </div>
+                                        <div class="w-full bg-slate-800 rounded-full h-2 md:h-3 overflow-hidden">
+                                            <div id="progressBar" 
+                                                 class="bg-gradient-to-r from-cyan-500 via-cyan-400 to-sky-400 h-2 md:h-3 rounded-full transition-all duration-500 ease-out relative" 
+                                                 style="width: 0%">
+                                                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-pulse"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                     
+                                    <!-- Step Progress -->
+                                    <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-3 md:p-4">
+                                        <h4 class="text-xs md:text-sm font-medium text-white mb-3">Chi tiết xử lý:</h4>
+                                        <div class="space-y-2">
+                                            <!-- Step 1: Upload -->
+                                            <div class="flex items-center space-x-3" id="step-upload">
+                                                <div class="w-5 h-5 rounded-full border-2 border-slate-600 flex items-center justify-center flex-shrink-0">
+                                                    <div class="w-2 h-2 rounded-full bg-slate-600"></div>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <span class="text-xs md:text-sm text-slate-400">1. Upload file IPA</span>
+                                                </div>
+                                                <div class="text-xs text-slate-500" id="step-upload-status">Chờ</div>
+                                            </div>
+                                            
+                                            <!-- Step 2: Processing -->
+                                            <div class="flex items-center space-x-3" id="step-processing">
+                                                <div class="w-5 h-5 rounded-full border-2 border-slate-600 flex items-center justify-center flex-shrink-0">
+                                                    <div class="w-2 h-2 rounded-full bg-slate-600"></div>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <span class="text-xs md:text-sm text-slate-400">2. Đang ký và xử lý IPA</span>
+                                                </div>
+                                                <div class="text-xs text-slate-500" id="step-processing-status">Chờ</div>
+                                            </div>
+                                            
+                                            <!-- Step 3: Generating -->
+                                            <div class="flex items-center space-x-3" id="step-generating">
+                                                <div class="w-5 h-5 rounded-full border-2 border-slate-600 flex items-center justify-center flex-shrink-0">
+                                                    <div class="w-2 h-2 rounded-full bg-slate-600"></div>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <span class="text-xs md:text-sm text-slate-400">3. Tạo link cài đặt</span>
+                                                </div>
+                                                <div class="text-xs text-slate-500" id="step-generating-status">Chờ</div>
+                                            </div>
+                                            
+                                            <!-- Step 4: Complete -->
+                                            <div class="flex items-center space-x-3" id="step-complete">
+                                                <div class="w-5 h-5 rounded-full border-2 border-slate-600 flex items-center justify-center flex-shrink-0">
+                                                    <div class="w-2 h-2 rounded-full bg-slate-600"></div>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <span class="text-xs md:text-sm text-slate-400">4. Hoàn thành</span>
+                                                </div>
+                                                <div class="text-xs text-slate-500" id="step-complete-status">Chờ</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     
+                                    <div class="flex items-center justify-center">
+                                        <div class="animate-spin rounded-full h-6 w-6 md:h-8 md:w-8 border-2 border-slate-600 border-t-cyan-500"></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>                        <!-- Step 5: Sign Button -->
-                        <div class="step-container" id="step5">
-                            <div class="step-card rounded-lg md:rounded-xl p-4 md:p-5">
-                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 md:mb-5">
-                                    <div class="flex items-center mb-3 sm:mb-0">
-                                        <div class="step-number w-8 h-8 md:w-10 md:h-10 bg-sky-500 text-white rounded-full flex items-center justify-center text-xs md:text-sm font-bold mr-3">5</div>
+                        </div>
+
+                        <!-- Loading Section -->
+                        <div id="loadingSection" class="hidden">
+                            <div class="step-card rounded-lg md:rounded-xl p-4 md:p-5 mb-4 md:mb-6">
+                                <div class="text-center">
+                                    <div class="animate-spin rounded-full h-6 w-6 md:h-8 md:w-8 border-2 border-cyan-500 border-t-transparent mx-auto mb-3"></div>
+                                    <p class="text-slate-400 font-medium">Đang xử lý...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Result Section -->
+                        <div id="resultSection" class="hidden">
+                            <div class="text-center mb-4 md:mb-5">
+                                <div class="inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-emerald-500/20 rounded-full mb-3 md:mb-4">
+                                    <svg class="w-6 h-6 md:w-7 md:h-7 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                </div>
+                                <h2 class="text-lg md:text-xl font-bold text-white mb-2">Upload thành công!</h2>
+                                <p class="text-slate-400 text-sm">File IPA đã được xử lý và sẵn sàng cài đặt</p>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <!-- App Info Card -->
+                                <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
+                                    <h3 class="text-white font-semibold mb-3 flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                            <line x1="8" y1="21" x2="16" y2="21"/>
+                                            <line x1="12" y1="17" x2="12" y2="21"/>
+                                        </svg>
+                                        Thông tin ứng dụng
+                                    </h3>
+                                    <div class="flex items-center space-x-4 mb-4">
+                                        <div id="appIcon" 
+                                             class="w-20 h-20 bg-slate-800 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden border border-slate-600/50">
+                                            <svg class="w-10 h-10 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                                            </svg>
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <h4 id="appName" class="text-lg font-semibold text-white truncate mb-1">App Name</h4>
+                                            <div class="space-y-1 text-sm text-slate-400">
+                                                <p class="truncate"><span class="font-medium text-slate-300">Bundle ID:</span> <span id="bundleId" class="font-mono text-xs">-</span></p>
+                                                <p><span class="font-medium text-slate-300">Version:</span> <span id="version">-</span> <span class="text-slate-500">(<span id="build">-</span>)</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Certificate Information Card -->
+                                <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
+                                    <h3 class="text-white font-semibold mb-3 flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                            <circle cx="12" cy="16" r="1"/>
+                                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                        </svg>
+                                        Thông tin chứng chỉ
+                                    </h3>
+                                    
+                                    <div class="space-y-3 text-sm">
+                                        <div class="grid grid-cols-2 gap-4">
+                                            <div>
+                                                <span class="text-slate-400 block mb-1">Team Name:</span>
+                                                <span id="teamName" class="text-white font-medium">-</span>
+                                            </div>
+                                            <div>
+                                                <span class="text-slate-400 block mb-1">Team ID:</span>
+                                                <span id="teamId" class="text-white font-mono text-xs">-</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="grid grid-cols-2 gap-4">
+                                            <div>
+                                                <span class="text-slate-400 block mb-1">Loại chứng chỉ:</span>
+                                                <span id="certType" class="text-white font-medium">-</span>
+                                            </div>
+                                            <div>
+                                                <span class="text-slate-400 block mb-1">Trạng thái:</span>
+                                                <span id="certStatus" class="font-medium">-</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="grid grid-cols-2 gap-4">
+                                            <div>
+                                                <span class="text-slate-400 block mb-1">File Size:</span>
+                                                <span id="fileSize" class="text-white font-medium">-</span>
+                                            </div>
+                                            <div>
+                                                <span class="text-slate-400 block mb-1">Storage:</span>
+                                                <span id="storageType" class="text-white font-medium uppercase">-</span>
+                                            </div>
+                                        </div>
+                                        
                                         <div>
-                                            <h3 class="text-base md:text-lg font-semibold text-white">Ký ứng dụng</h3>
-                                            <p class="text-slate-400 text-xs md:text-sm">Thực hiện ký ứng dụng với certificate</p>
+                                            <span class="text-slate-400 block mb-1">Hạn sử dụng:</span>
+                                            <div class="flex items-center justify-between">
+                                                <span id="certExpiry" class="text-white font-mono text-xs">-</span>
+                                                <span id="certDays" class="text-sm"></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <div class="space-y-3">
-                                    <button onclick="signIpa()" 
-                                            id="signButton" 
-                                            disabled
-                                            class="group relative w-full overflow-hidden rounded-lg bg-gradient-to-r from-sky-500 via-sky-600 to-cyan-500 p-3 md:p-4 font-medium text-white transition-all duration-300 hover:from-sky-400 hover:to-cyan-400 hover:shadow-lg hover:shadow-sky-500/25 focus:outline-none focus:ring-2 focus:ring-sky-500/50 disabled:opacity-50 disabled:cursor-not-allowed">
-                                        <div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                        <div class="relative flex items-center justify-center gap-2 md:gap-3">
-                                            <svg class="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                                <path d="m9 12 2 2 4-4"/>
-                                            </svg>
-                                            <span class="text-sm md:text-base font-semibold">Bắt đầu ký ứng dụng</span>
-                                        </div>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-            </div>
 
-            <!-- Signing Progress -->
-            <div class="hidden step-card rounded-lg md:rounded-xl p-4 md:p-5 mb-4 md:mb-6" id="signingProgress">
-                <div class="text-center mb-4 md:mb-5">
-                    <h2 class="text-lg md:text-xl font-bold text-white mb-2" id="signingProgressTitle">Đang ký ứng dụng...</h2>
-                    <p class="text-slate-400 text-sm" id="signingFileName">Vui lòng chờ trong giây lát</p>
-                </div>
-                
-                <div class="space-y-4 md:space-y-5">
-                    <!-- Overall Progress Bar -->
-                    <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-3 md:p-4">
-                        <div class="flex items-center justify-between mb-2 md:mb-3">
-                            <span class="text-xs md:text-sm font-medium text-white" id="signingProgressLabel">Bắt đầu ký ứng dụng</span>
-                            <span class="text-xs md:text-sm text-slate-400" id="progressPercent">0%</span>
-                        </div>
-                        <div class="w-full bg-slate-800 rounded-full h-2 md:h-3 overflow-hidden">
-                            <div id="progressFill" 
-                                 class="bg-gradient-to-r from-sky-500 via-sky-400 to-cyan-400 h-2 md:h-3 rounded-full transition-all duration-500 ease-out relative" 
-                                 style="width: 0%">
-                                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-pulse"></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Step Progress -->
-                    <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-3 md:p-4">
-                        <h4 class="text-xs md:text-sm font-medium text-white mb-3">Chi tiết quá trình ký:</h4>
-                        <div class="space-y-2">
-                            <!-- Step 1: Upload Files -->
-                            <div class="flex items-center space-x-3" id="signing-step-upload">
-                                <div class="w-5 h-5 rounded-full border-2 border-slate-600 flex items-center justify-center flex-shrink-0">
-                                    <div class="w-2 h-2 rounded-full bg-slate-600"></div>
-                                </div>
-                                <div class="flex-1">
-                                    <span class="text-xs md:text-sm text-slate-400">1. Chuẩn bị files</span>
-                                </div>
-                                <div class="text-xs text-slate-500" id="signing-step-upload-status">Chờ</div>
-                            </div>
-                            
-                            <!-- Step 2: Processing Certificate -->
-                            <div class="flex items-center space-x-3" id="signing-step-certificate">
-                                <div class="w-5 h-5 rounded-full border-2 border-slate-600 flex items-center justify-center flex-shrink-0">
-                                    <div class="w-2 h-2 rounded-full bg-slate-600"></div>
-                                </div>
-                                <div class="flex-1">
-                                    <span class="text-xs md:text-sm text-slate-400">2. Xử lý certificate</span>
-                                </div>
-                                <div class="text-xs text-slate-500" id="signing-step-certificate-status">Chờ</div>
-                            </div>
-                            
-                            <!-- Step 3: Signing IPA -->
-                            <div class="flex items-center space-x-3" id="signing-step-signing">
-                                <div class="w-5 h-5 rounded-full border-2 border-slate-600 flex items-center justify-center flex-shrink-0">
-                                    <div class="w-2 h-2 rounded-full bg-slate-600"></div>
-                                </div>
-                                <div class="flex-1">
-                                    <span class="text-xs md:text-sm text-slate-400">3. Đang ký IPA</span>
-                                </div>
-                                <div class="text-xs text-slate-500" id="signing-step-signing-status">Chờ</div>
-                            </div>
-                            
-                            <!-- Step 4: Generating Install Link -->
-                            <div class="flex items-center space-x-3" id="signing-step-generating">
-                                <div class="w-5 h-5 rounded-full border-2 border-slate-600 flex items-center justify-center flex-shrink-0">
-                                    <div class="w-2 h-2 rounded-full bg-slate-600"></div>
-                                </div>
-                                <div class="flex-1">
-                                    <span class="text-xs md:text-sm text-slate-400">4. Tạo link cài đặt</span>
-                                </div>
-                                <div class="text-xs text-slate-500" id="signing-step-generating-status">Chờ</div>
-                            </div>
-                            
-                            <!-- Step 5: Complete -->
-                            <div class="flex items-center space-x-3" id="signing-step-complete">
-                                <div class="w-5 h-5 rounded-full border-2 border-slate-600 flex items-center justify-center flex-shrink-0">
-                                    <div class="w-2 h-2 rounded-full bg-slate-600"></div>
-                                </div>
-                                <div class="flex-1">
-                                    <span class="text-xs md:text-sm text-slate-400">5. Hoàn thành</span>
-                                </div>
-                                <div class="text-xs text-slate-500" id="signing-step-complete-status">Chờ</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-center justify-center">
-                        <div class="animate-spin rounded-full h-6 w-6 md:h-8 md:w-8 border-2 border-slate-600 border-t-sky-500"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Signing Result -->
-            <div class="hidden step-card rounded-lg md:rounded-xl p-4 md:p-5 mb-4 md:mb-6" id="resultSection">
-                <!-- Hidden input to store fileId for install page -->
-                <input type="hidden" id="signedFileId" value="">
-                
-                <div class="text-center mb-4 md:mb-5">
-                    <div class="inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-emerald-500/20 rounded-full mb-3 md:mb-4">
-                        <svg class="w-6 h-6 md:w-7 md:h-7 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="20,6 9,17 4,12"/>
-                        </svg>
-                    </div>
-                    <h2 class="text-lg md:text-xl font-bold text-white mb-2">Ký thành công!</h2>
-                    <p class="text-slate-400 text-sm">Ứng dụng đã được ký và sẵn sàng cài đặt</p>
-                </div>
-                
-                <div class="space-y-4">
-                    <!-- App Info Card -->
-                    <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
-                        <h3 class="text-white font-semibold mb-3 flex items-center gap-2">
-                            <svg class="w-5 h-5 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                                <line x1="8" y1="21" x2="16" y2="21"/>
-                                <line x1="12" y1="17" x2="12" y2="21"/>
-                            </svg>
-                            Thông tin ứng dụng
-                        </h3>
-                        <div class="flex items-center space-x-4 mb-4">
-                            <div id="appIcon" 
-                                 class="w-20 h-20 bg-slate-800 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden border border-slate-600/50">
-                                <svg class="w-10 h-10 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
-                                    <line x1="12" y1="18" x2="12.01" y2="18"/>
-                                </svg>
-                            </div>
-                            <div class="flex-1 min-w-0">
-                                <h4 id="appName" class="text-lg font-semibold text-white truncate mb-1">App Name</h4>
-                                <div class="space-y-1 text-sm text-slate-400">
-                                    <p class="truncate"><span class="font-medium text-slate-300">Bundle ID:</span> <span id="bundleId" class="font-mono text-xs">-</span></p>
-                                    <p><span class="font-medium text-slate-300">Version:</span> <span id="appVersion">-</span> <span class="text-slate-500">(<span id="buildVersion">-</span>)</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Certificate Information Card -->
-                    <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
-                        <h3 class="text-white font-semibold mb-3 flex items-center gap-2">
-                            <svg class="w-5 h-5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                                <circle cx="12" cy="16" r="1"/>
-                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                            </svg>
-                            Thông tin chứng chỉ
-                        </h3>
-                        
-                        <div class="space-y-3 text-sm">
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <span class="text-slate-400 block mb-1">Team Name:</span>
-                                    <span id="teamName" class="text-white font-medium">-</span>
-                                </div>
-                                <div>
-                                    <span class="text-slate-400 block mb-1">Team ID:</span>
-                                    <span id="teamId" class="text-white font-mono text-xs">-</span>
-                                </div>
-                            </div>
-                            
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <span class="text-slate-400 block mb-1">Loại chứng chỉ:</span>
-                                    <span id="certType" class="text-white font-medium">-</span>
-                                </div>
-                                <div>
-                                    <span class="text-slate-400 block mb-1">Trạng thái:</span>
-                                    <span id="certStatus" class="font-medium">-</span>
-                                </div>
-                            </div>
-                            
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <span class="text-slate-400 block mb-1">File Size:</span>
-                                    <span id="fileSize" class="text-white font-medium">-</span>
-                                </div>
-                                <div>
-                                    <span class="text-slate-400 block mb-1">Storage:</span>
-                                    <span id="storageType" class="text-white font-medium uppercase">-</span>
-                                </div>
-                            </div>
-                            
-                            <div>
-                                <span class="text-slate-400 block mb-1">Hạn sử dụng:</span>
-                                <div class="flex items-center justify-between">
-                                    <span id="certExpiry" class="text-white font-mono text-xs">-</span>
-                                    <span id="certDays" class="text-sm"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Install Link Card -->
-                    <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
-                        <h3 class="text-white font-semibold mb-3 flex items-center gap-2">
-                            <svg class="w-5 h-5 text-sky-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                                <polyline points="7,10 12,15 17,10"/>
-                                <line x1="12" y1="15" x2="12" y2="3"/>
-                            </svg>
-                            Cài đặt ứng dụng
-                        </h3>
-                        
-                        <!-- Direct Install Button -->
-                        <div class="mb-4">
-                            <button id="installBtn" onclick="openInstallPage()" class="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
-                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                                    <line x1="8" y1="21" x2="16" y2="21"/>
-                                    <line x1="12" y1="17" x2="12" y2="21"/>
-                                </svg>
-                                Cài đặt trên iOS
-                            </button>
-                            <p class="text-xs text-slate-400 mt-2 text-center">Chỉ hoạt động trên thiết bị iOS với Safari</p>
-                        </div>
-
-                        <!-- Install Links -->
-                        <div class="space-y-3">
-                            <div>
-                                <label class="text-slate-400 text-xs mb-1 block">Link cài đặt:</label>
-                                <div class="flex gap-2">
-                                    <input type="text" id="installUrl" readonly 
-                                           class="flex-1 px-3 py-2 bg-slate-800 border border-slate-600 rounded text-white text-xs font-mono">
-                                    <button onclick="copyToClipboard('installUrl')" 
-                                            class="px-3 py-2 bg-cyan-500 hover:bg-cyan-400 text-white rounded transition-colors">
-                                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
-                                            <path d="m5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-                                        </svg>
-                                    </button>
-                                    <button onclick="shortenInstallUrl()" id="shortenBtn"
-                                            class="px-3 py-2 bg-purple-500 hover:bg-purple-400 text-white rounded transition-colors">
-                                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
-                                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div id="installUrlShort" class="hidden mt-2">
-                                    <div class="mb-2">
-                                        <span class="text-xs font-medium text-emerald-400">Link rút gọn:</span>
-                                    </div>
-                                    <div class="flex gap-2">
-                                        <div id="installUrlShortText" 
-                                             class="flex-1 bg-emerald-500/10 border border-emerald-500/30 p-2 rounded text-xs font-mono text-emerald-400">-</div>
-                                        <button onclick="copyToClipboard('installUrlShortText')" 
-                                                class="px-3 py-2 bg-emerald-500 hover:bg-emerald-400 text-white rounded transition-colors">
-                                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
-                                                <path d="m5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- IPA Download Link -->
-                            <div>
-                                <label class="text-slate-400 text-xs mb-1 block">Link tải IPA đã ký:</label>
-                                <div class="flex gap-2">
-                                    <input type="text" id="ipaDownloadUrl" readonly 
-                                           class="flex-1 px-3 py-2 bg-slate-800 border border-slate-600 rounded text-white text-xs font-mono">
-                                    <button onclick="copyToClipboard('ipaDownloadUrl')" 
-                                            class="px-3 py-2 bg-orange-500 hover:bg-orange-400 text-white rounded transition-colors">
-                                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
-                                            <path d="m5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-                                        </svg>
-                                    </button>
-                                    <button onclick="window.open(document.getElementById('ipaDownloadUrl').value, '_blank')" 
-                                            class="px-3 py-2 bg-emerald-500 hover:bg-emerald-400 text-white rounded transition-colors">
-                                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <!-- Install Link Card -->
+                                <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
+                                    <h3 class="text-white font-semibold mb-3 flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-sky-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                                             <polyline points="7,10 12,15 17,10"/>
                                             <line x1="12" y1="15" x2="12" y2="3"/>
                                         </svg>
-                                    </button>
+                                        Cài đặt ứng dụng
+                                    </h3>
+                                    
+                                    <!-- Install Link -->
+                                    <div class="space-y-3">
+                                        <div>
+                                            <label class="text-slate-400 text-xs mb-1 block">Link cài đặt (itms):</label>
+                                            <div class="flex gap-2">
+                                                <input type="text" id="installUrl" readonly 
+                                                       class="flex-1 px-3 py-2 bg-slate-800 border border-slate-600 rounded text-white text-xs font-mono">
+                                                <button onclick="copyToClipboard('installUrl')" 
+                                                        class="px-3 py-2 bg-cyan-500 hover:bg-cyan-400 text-white rounded transition-colors">
+                                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                                                    </svg>
+                                                </button>
+                                                <button onclick="shortenUrl('installUrl')" id="shortenBtn"
+                                                        class="px-3 py-2 bg-emerald-500 hover:bg-emerald-400 text-white rounded transition-colors">
+                                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                                                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div id="installUrlShort" class="hidden mt-2">
+                                                <div class="flex items-center justify-between mb-2">
+                                                    <span class="text-xs font-medium text-emerald-400">Link rút gọn:</span>
+                                                    <button onclick="copyToClipboard('installUrlShortText')" 
+                                                            class="px-2 py-1 bg-emerald-500/20 text-emerald-400 rounded text-xs font-medium transition-colors">
+                                                        <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                                                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div id="installUrlShortText" 
+                                                     class="bg-emerald-500/10 border border-emerald-500/30 p-2 rounded text-xs font-mono text-emerald-400">-</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- IPA Download Link -->
+                                        <div>
+                                            <label class="text-slate-400 text-xs mb-1 block">Link tải IPA:</label>
+                                            <div class="flex gap-2">
+                                                <input type="text" id="ipaDownloadUrl" readonly 
+                                                       class="flex-1 px-3 py-2 bg-slate-800 border border-slate-600 rounded text-white text-xs font-mono">
+                                                <button onclick="copyToClipboard('ipaDownloadUrl')" 
+                                                        class="px-3 py-2 bg-purple-500 hover:bg-purple-400 text-white rounded transition-colors">
+                                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                                                    </svg>
+                                                </button>
+                                                <button onclick="window.open(document.getElementById('ipaDownloadUrl').value, '_blank')" 
+                                                        class="px-3 py-2 bg-orange-500 hover:bg-orange-400 text-white rounded transition-colors">
+                                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                                        <polyline points="7,10 12,15 17,10"/>
+                                                        <line x1="12" y1="15" x2="12" y2="3"/>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Actions -->
+                                <div class="text-center">
+                                    <div class="grid grid-cols-2 gap-3">
+                                        <button onclick="resetUpload()" 
+                                                class="flex items-center justify-center space-x-2 px-4 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg font-medium transition-colors">
+                                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="23 4 23 10 17 10"/>
+                                                <polyline points="1 20 1 14 7 14"/>
+                                                <path d="m3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                                            </svg>
+                                            <span>Upload lại</span>
+                                        </button>
+                                        <button onclick="openInstallPage()" 
+                                                class="flex items-center justify-center space-x-2 px-4 py-3 bg-sky-500 hover:bg-sky-400 text-white rounded-lg font-medium transition-colors">
+                                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                            <span>Mở trang</span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Actions -->
-                    <div class="text-center">
-                        <div class="grid grid-cols-2 gap-3">
-                            <button onclick="signNewFile()" 
-                                    class="flex items-center justify-center space-x-2 px-4 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg font-medium transition-colors">
-                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="23 4 23 10 17 10"/>
-                                    <polyline points="1 20 1 14 7 14"/>
-                                    <path d="m3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
-                                </svg>
-                                <span>Ký file khác</span>
-                            </button>
-                            <button onclick="openInstallPage()" 
-                                    class="flex items-center justify-center space-x-2 px-4 py-3 bg-sky-500 hover:bg-sky-400 text-white rounded-lg font-medium transition-colors">
-                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                    <polyline points="15,3 21,3 21,9"/>
-                                    <line x1="10" y1="14" x2="21" y2="3"/>
-                                </svg>
-                                <span>Mở trang</span>
-                            </button>
+                        <!-- Error Section -->
+                        <div id="errorMessage" class="hidden">
+                            <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-4">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-8 h-8 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <svg class="w-4 h-4 text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"/>
+                                            <line x1="15" y1="9" x2="9" y2="15"/>
+                                            <line x1="9" y1="9" x2="15" y2="15"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-medium text-red-400">Có lỗi xảy ra</h4>
+                                        <p id="errorText" class="text-sm text-red-300">Error message</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -858,6 +606,763 @@
         </div>
     </div>
 
-    <script src="/public/js/signing.js"></script>
+    <!-- Footer với hướng dẫn -->
+    <footer class="relative z-10 mt-8 md:mt-12">
+        <div class="max-w-3xl mx-auto px-3 md:px-6">
+            <div class="nu-card rounded-xl p-4 md:p-6">
+                <div class="text-center mb-4 md:mb-6">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-2">🚀 Cách hoạt động</h3>
+                    <p class="text-slate-400 text-sm">Upload IPA đã ký và nhận link cài đặt trực tiếp cho iOS</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-6">
+                    <!-- Step 1 -->
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-sky-500 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg shadow-cyan-500/25">
+                            <span class="text-white font-bold text-lg">1</span>
+                        </div>
+                        <h4 class="font-semibold text-white mb-2">Upload IPA</h4>
+                        <p class="text-xs md:text-sm text-slate-400">Upload file .ipa đã ký bằng chứng chỉ doanh nghiệp</p>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg shadow-purple-500/25">
+                            <span class="text-white font-bold text-lg">2</span>
+                        </div>
+                        <h4 class="font-semibold text-white mb-2">Tạo manifest</h4>
+                        <p class="text-xs md:text-sm text-slate-400">Hệ thống tự động tạo manifest và link cài đặt</p>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-500 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg shadow-emerald-500/25">
+                            <span class="text-white font-bold text-lg">3</span>
+                        </div>
+                        <h4 class="font-semibold text-white mb-2">Cài đặt ngay</h4>
+                        <p class="text-xs md:text-sm text-slate-400">Copy link và cài đặt trực tiếp trên iPhone/iPad</p>
+                    </div>
+                </div>
+                
+                <!-- Technical Info -->
+                <div class="bg-slate-900/50 rounded-lg p-4 mb-4">
+                    <h4 class="font-semibold text-white mb-3 flex items-center gap-2">
+                        <svg class="w-4 h-4 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="m9 12 2 2 4-4"/>
+                        </svg>
+                        Yêu cầu
+                    </h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs md:text-sm text-slate-400">
+                        <div>
+                            <span class="font-medium text-slate-300">📱 Thiết bị:</span>
+                            <p>iPhone/iPad bất kỳ</p>
+                        </div>
+                        <div>
+                            <span class="font-medium text-slate-300">🌐 Trình duyệt:</span>
+                            <p>Safari để cài đặt</p>
+                        </div>
+                        <div>
+                            <span class="font-medium text-slate-300">📄 File IPA:</span>
+                            <p>Đã ký bằng Enterprise Certificate</p>
+                        </div>
+                        <div>
+                            <span class="font-medium text-slate-300">⚡ Tốc độ:</span>
+                            <p>Tạo link cài đặt trong vài giây</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <!-- Copyright -->
+                <div class="text-center mt-6 pt-4 border-t border-slate-700">
+                    <p class="text-xs text-slate-500">
+                        © 2025 Vthangios.vn. Made with ❤️ for iOS community.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentFileId = null;
+        let currentData = null;
+
+        // File input event
+        document.getElementById('fileInput').addEventListener('change', handleFileSelect);
+
+        // Drag and drop events
+        const uploadArea = document.getElementById('uploadArea');
+        
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('step-card');
+            uploadArea.classList.add('border-cyan-500', 'bg-cyan-500/10');
+        });
+
+        uploadArea.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('border-cyan-500', 'bg-cyan-500/10');
+            uploadArea.classList.add('step-card');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('border-cyan-500', 'bg-cyan-500/10');
+            uploadArea.classList.add('step-card');
+            
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFile(files[0]);
+            }
+        });
+
+        function handleFileSelect(e) {
+            const file = e.target.files[0];
+            if (file) {
+                handleFile(file);
+            }
+        }
+
+        function handleFile(file) {
+            if (!file.name.toLowerCase().endsWith('.ipa')) {
+                showError('Vui lòng chọn file .ipa');
+                return;
+            }
+
+            if (file.size > 500 * 1024 * 1024) {
+                showError('File quá lớn. Kích thước tối đa là 500MB');
+                return;
+            }
+
+            uploadFile(file);
+        }
+
+        async function uploadFile(file) {
+            showProgress(true, file.name);
+            hideError();
+            hideResult();
+
+            const formData = new FormData();
+            formData.append('ipaFile', file);
+
+            try {
+                // Step 1: Start upload
+                updateProgressStep('upload', 'active', 'Đang tải lên...');
+                updateProgress(10, 'Đang tải file lên server...');
+                
+                // Simulate upload progress
+                let progress = 10;
+                const uploadInterval = setInterval(() => {
+                    progress += Math.random() * 15;
+                    if (progress > 40) progress = 40;
+                    updateProgress(progress, 'Đang tải file lên server...');
+                }, 300);
+
+                const response = await fetch('/api/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                clearInterval(uploadInterval);
+                
+                // Step 1: Complete upload
+                updateProgressStep('upload', 'complete', 'Hoàn thành');
+                updateProgress(50, 'Upload thành công');
+                
+                // Step 2: Processing
+                updateProgressStep('processing', 'active', 'Đang xử lý...');
+                updateProgress(60, 'Đang ký và xử lý IPA...');
+                
+                // Simulate processing time
+                await new Promise(resolve => setTimeout(resolve, 1500));
+                
+                // Step 2: Complete processing
+                updateProgressStep('processing', 'complete', 'Hoàn thành');
+                updateProgress(80, 'Xử lý IPA thành công');
+                
+                // Step 3: Generating links
+                updateProgressStep('generating', 'active', 'Đang tạo...');
+                updateProgress(90, 'Đang tạo link cài đặt...');
+                
+                const result = await response.json();
+                
+                // Simulate link generation time
+                await new Promise(resolve => setTimeout(resolve, 800));
+                
+                // Step 3: Complete generating
+                updateProgressStep('generating', 'complete', 'Hoàn thành');
+                updateProgress(95, 'Tạo link thành công');
+                
+                // Step 4: Complete all
+                updateProgressStep('complete', 'complete', 'Hoàn thành');
+                updateProgress(100, 'Xử lý hoàn tất');
+
+                setTimeout(() => {
+                    showProgress(false);
+                    if (result.success) {
+                        showResult(result, file);
+                    } else {
+                        showError(result.error || 'Có lỗi xảy ra khi xử lý file');
+                    }
+                }, 1000);
+
+            } catch (error) {
+                // Mark current step as error - find which step is currently active
+                const steps = ['upload', 'processing', 'generating', 'complete'];
+                let errorStep = 'upload'; // default to first step
+                
+                for (const step of steps) {
+                    const statusElement = document.getElementById(`step-${step}-status`);
+                    if (statusElement && statusElement.textContent && 
+                        (statusElement.textContent.includes('Đang') || statusElement.classList.contains('text-cyan-400'))) {
+                        errorStep = step;
+                        break;
+                    }
+                }
+                
+                updateProgressStep(errorStep, 'error', 'Lỗi');
+                
+                showProgress(false);
+                showError('Không thể upload file: ' + error.message);
+            }
+        }
+
+        function updateProgressStep(step, status, statusText) {
+            console.log(`🔧 updateProgressStep: ${step} -> ${status} (${statusText})`);
+            
+            const stepElement = document.getElementById(`step-${step}`);
+            const statusElement = document.getElementById(`step-${step}-status`);
+            
+            if (!stepElement || !statusElement) {
+                console.warn(`❌ Step element not found: step-${step}`);
+                console.warn(`stepElement:`, stepElement);
+                console.warn(`statusElement:`, statusElement);
+                return;
+            }
+            
+            const circle = stepElement.querySelector('.w-5.h-5');
+            const text = stepElement.querySelector('span');
+            
+            if (!circle || !text) {
+                console.warn(`Circle or text element not found in step-${step}`);
+                return;
+            }
+            
+            // Reset all states first
+            circle.className = 'w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0';
+            
+            // Remove existing dot if any
+            const existingDot = circle.querySelector('.w-2.h-2');
+            if (existingDot) {
+                existingDot.remove();
+            }
+            
+            switch (status) {
+                case 'active':
+                    circle.classList.add('border-cyan-500', 'bg-cyan-500/20');
+                    text.classList.remove('text-slate-400');
+                    text.classList.add('text-cyan-400');
+                    statusElement.textContent = statusText;
+                    statusElement.className = 'text-xs text-cyan-400';
+                    
+                    // Add spinning icon for active state
+                    circle.innerHTML = `<svg class="w-3 h-3 text-cyan-500 animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+                    </svg>`;
+                    break;
+                    
+                case 'complete':
+                    circle.classList.add('border-emerald-500', 'bg-emerald-500/20');
+                    text.classList.remove('text-slate-400');
+                    text.classList.add('text-emerald-400');
+                    statusElement.textContent = statusText;
+                    statusElement.className = 'text-xs text-emerald-400';
+                    
+                    // Add check icon for complete state
+                    circle.innerHTML = `<svg class="w-3 h-3 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20,6 9,17 4,12"/>
+                    </svg>`;
+                    break;
+                    
+                case 'error':
+                    circle.classList.add('border-red-500', 'bg-red-500/20');
+                    text.classList.remove('text-slate-400');
+                    text.classList.add('text-red-400');
+                    statusElement.textContent = statusText;
+                    statusElement.className = 'text-xs text-red-400';
+                    
+                    // Add error icon
+                    circle.innerHTML = `<svg class="w-3 h-3 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>`;
+                    break;
+                    
+                case 'waiting':
+                    circle.classList.add('border-slate-600');
+                    text.classList.remove('text-cyan-400', 'text-emerald-400', 'text-red-400');
+                    text.classList.add('text-slate-400');
+                    statusElement.textContent = statusText;
+                    statusElement.className = 'text-xs text-slate-500';
+                    
+                    // Add default dot for waiting state
+                    circle.innerHTML = `<div class="w-2 h-2 rounded-full bg-slate-600"></div>`;
+                    break;
+                    
+                default:
+                    circle.classList.add('border-slate-600');
+                    text.classList.remove('text-cyan-400', 'text-emerald-400', 'text-red-400');
+                    text.classList.add('text-slate-400');
+                    statusElement.textContent = statusText;
+                    statusElement.className = 'text-xs text-slate-500';
+                    
+                    // Add default dot
+                    circle.innerHTML = `<div class="w-2 h-2 rounded-full bg-slate-600"></div>`;
+            }
+        }
+
+        function showProgress(show, fileName = '') {
+            console.log('🎯 showProgress called:', { show, fileName });
+            const section = document.getElementById('progressSection');
+            
+            if (!section) {
+                console.error('❌ progressSection element not found!');
+                return;
+            }
+            
+            if (show) {
+                console.log('📤 Showing progress section');
+                document.getElementById('uploadFileName').textContent = fileName;
+                document.getElementById('progressTitle').textContent = 'Đang xử lý...';
+                
+                // Reset all steps
+                console.log('🔄 Resetting all progress steps');
+                updateProgressStep('upload', 'waiting', 'Chờ');
+                updateProgressStep('processing', 'waiting', 'Chờ');
+                updateProgressStep('generating', 'waiting', 'Chờ');
+                updateProgressStep('complete', 'waiting', 'Chờ');
+                
+                section.classList.remove('hidden');
+                console.log('✅ Progress section shown');
+            } else {
+                console.log('📥 Hiding progress section');
+                section.classList.add('hidden');
+            }
+        }
+
+        function updateProgress(percent, label) {
+            const progressBar = document.getElementById('progressBar');
+            const percentText = document.getElementById('uploadPercent');
+            const labelText = document.getElementById('progressLabel');
+            
+            progressBar.style.width = percent + '%';
+            percentText.textContent = Math.round(percent) + '%';
+            labelText.textContent = label;
+        }
+
+        function showResult(data, file) {
+            currentFileId = data.fileId;
+            currentData = data;
+            
+            // Update app info
+            document.getElementById('appName').textContent = data.appName || 'Unknown App';
+            document.getElementById('bundleId').textContent = data.bundleId || 'N/A';
+            document.getElementById('version').textContent = data.version || 'N/A';
+            document.getElementById('build').textContent = data.buildVersion || 'N/A';
+
+            // Enhanced certificate info display - handle based on embedded.mobileprovision
+            console.log('📋 Certificate data received:', data.certificateInfo);
+            console.log('📋 Signed status:', data.signed);
+            console.log('📋 Full data object:', data);
+            
+            // Check if we have valid certificate info from embedded.mobileprovision
+            if (data.certificateInfo && 
+                data.certificateInfo.teamName && 
+                data.certificateInfo.teamName !== 'Unknown' &&
+                data.certificateInfo.teamName !== 'DECRYPT' &&
+                data.certificateInfo.teamName !== 'IPA Decrypt') {
+                
+                // IPA có embedded.mobileprovision - hiển thị thông tin P12 chi tiết
+                const certInfo = data.certificateInfo;
+                
+                // Handle different naming conventions for team info
+                const teamName = certInfo.teamName || certInfo.team_name || 'Unknown Team';
+                const teamId = certInfo.teamId || certInfo.team_id || 'Unknown ID';
+                const certType = certInfo.certificateType || certInfo.certificate_type || 'Enterprise';
+                const certStatus = certInfo.status || 'Hợp lệ';
+                const certExpiry = certInfo.expiryDate || certInfo.expiry_date || 'Unknown';
+                
+                console.log('📋 Parsed certificate values:', { teamName, teamId, certType, certStatus, certExpiry });
+                
+                document.getElementById('teamName').textContent = teamName;
+                document.getElementById('teamId').textContent = teamId;
+                document.getElementById('certType').textContent = certType;
+                document.getElementById('certStatus').textContent = certStatus;
+                document.getElementById('certExpiry').textContent = certExpiry;
+                
+                // Update status color based on validity and signed status
+                const statusElement = document.getElementById('certStatus');
+                const isValid = certInfo.isValid !== false && certInfo.is_valid !== false && certStatus !== 'Invalid';
+                
+                if (isValid) {
+                    statusElement.className = 'text-green-600 font-medium';
+                } else {
+                    statusElement.className = 'text-red-600 font-medium';
+                }
+                
+                // Show days until expiry with improved handling
+                const daysUntilExpiry = certInfo.daysUntilExpiry || certInfo.days_until_expiry;
+                if (daysUntilExpiry !== null && daysUntilExpiry !== undefined) {
+                    const daysElement = document.getElementById('certDays');
+                    if (daysUntilExpiry > 0) {
+                        daysElement.textContent = `${daysUntilExpiry} ngày còn lại`;
+                        daysElement.className = daysUntilExpiry > 30 ? 'text-green-600 text-sm' : 
+                                              daysUntilExpiry > 7 ? 'text-yellow-600 text-sm' : 'text-orange-600 text-sm';
+                    } else {
+                        daysElement.textContent = `Đã hết hạn ${Math.abs(daysUntilExpiry)} ngày`;
+                        daysElement.className = 'text-red-600 text-sm';
+                    }
+                } else {
+                    document.getElementById('certDays').textContent = '';
+                }
+                
+                console.log('✅ Certificate info displayed (có embedded.mobileprovision):', { teamName, teamId, certType, certStatus });
+                
+            } else {
+                // IPA không có embedded.mobileprovision hoặc là decrypt
+                console.log('⚠️ No embedded.mobileprovision found - IPA decrypt');
+                
+                document.getElementById('teamName').textContent = '-';
+                document.getElementById('teamId').textContent = '-';
+                document.getElementById('certType').textContent = '-';
+                document.getElementById('certStatus').textContent = 'IPA Decrypt';
+                document.getElementById('certExpiry').textContent = '-';
+                
+                // Update status color for decrypt IPA
+                const statusElement = document.getElementById('certStatus');
+                statusElement.className = 'text-orange-500 font-medium';
+                
+                // Clear days info
+                document.getElementById('certDays').textContent = '';
+            }
+
+            // Update additional info
+            document.getElementById('fileSize').textContent = data.fileSize || 'Unknown';
+            document.getElementById('storageType').textContent = data.storage || 'Local';
+
+            // Update install URL (itms link)
+            if (data.installUrl) {
+                document.getElementById('installUrl').value = data.installUrl;
+            } else {
+                // Fallback if installUrl is not provided
+                const fallbackInstallUrl = `${window.location.origin}/${data.fileId}`;
+                document.getElementById('installUrl').value = fallbackInstallUrl;
+            }
+            
+            // Update IPA download URL
+            if (data.ipaDownloadUrl) {
+                document.getElementById('ipaDownloadUrl').value = data.ipaDownloadUrl;
+            } else if (data.url) {
+                document.getElementById('ipaDownloadUrl').value = data.url;
+            }
+
+            // Show app icon if available
+            const iconElement = document.getElementById('appIcon');
+            if (data.iconUrl) {
+                const testImg = new Image();
+                testImg.onload = function() {
+                    iconElement.innerHTML = `<img src="${this.src}" class="w-full h-full object-cover rounded-lg shadow-lg" alt="App Icon" />`;
+                };
+                testImg.onerror = function() {
+                    // Fallback to default icon
+                    iconElement.innerHTML = `<svg class="w-8 h-8 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                        <line x1="12" y1="18" x2="12.01" y2="18"/>
+                    </svg>`;
+                };
+                testImg.src = data.iconUrl;
+            } else {
+                // No icon data available - show default icon with better styling
+                iconElement.innerHTML = `<div class="w-full h-full bg-gradient-to-br from-slate-700 to-slate-600 rounded-lg flex items-center justify-center border border-slate-500/30">
+                    <svg class="w-8 h-8 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                        <line x1="12" y1="18" x2="12.01" y2="18"/>
+                    </svg>
+                </div>`;
+            }
+
+            document.getElementById('resultSection').classList.remove('hidden');
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 B';
+            const k = 1024;
+            const sizes = ['B', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+        }
+
+        function showLoading(show) {
+            if (show) {
+                document.getElementById('loadingSection').classList.remove('hidden');
+            } else {
+                document.getElementById('loadingSection').classList.add('hidden');
+            }
+        }
+
+        function hideResult() {
+            document.getElementById('resultSection').classList.add('hidden');
+        }
+
+        function showError(message) {
+            document.getElementById('errorText').textContent = message;
+            document.getElementById('errorMessage').classList.remove('hidden');
+        }
+
+        function hideError() {
+            document.getElementById('errorMessage').classList.add('hidden');
+        }
+
+        function toggleManifest() {
+            const content = document.getElementById('manifestContent');
+            const chevron = document.getElementById('manifestChevron');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                chevron.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                chevron.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        function toggleDetails() {
+            const section = document.getElementById('detailsSection');
+            const btn = document.getElementById('detailsToggleText');
+            
+            if (section.classList.contains('hidden')) {
+                section.classList.remove('hidden');
+                btn.textContent = 'Ẩn';
+            } else {
+                section.classList.add('hidden');
+                btn.textContent = 'Hiện';
+            }
+        }
+
+        function resetUpload() {
+            // Reset all states
+            hideResult();
+            hideError();
+            showProgress(false);
+            currentFileId = null;
+            currentData = null;
+            
+            // Reset file input
+            document.getElementById('fileInput').value = '';
+            
+            // Add some visual feedback
+            const uploadArea = document.getElementById('uploadArea');
+            uploadArea.classList.add('pulse-success');
+            setTimeout(() => {
+                uploadArea.classList.remove('pulse-success');
+            }, 600);
+        }
+
+        function shareApp() {
+            if (!currentData) return;
+            
+            const installPageUrl = `${window.location.origin}/${currentData.fileId}`;
+            const appName = currentData.ipaInfo.bundleDisplayName || currentData.ipaInfo.bundleName || 'iOS App';
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: `Cài đặt ${appName}`,
+                    text: `Cài đặt ứng dụng ${appName} trên iPhone của bạn`,
+                    url: installPageUrl
+                }).catch(console.error);
+            } else {
+                // Fallback: copy to clipboard
+                navigator.clipboard.writeText(installPageUrl).then(() => {
+                    const btn = event.target.closest('button');
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = `<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20,6 9,17 4,12"/>
+                    </svg><span>Đã copy!</span>`;
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                    }, 2000);
+                });
+            }
+        }
+
+        async function shortenUrl(elementId) {
+            const element = document.getElementById(elementId);
+            const url = element.value || element.textContent.trim();
+            const btn = event.target;
+            
+            if (!url || url === '-') {
+                return;
+            }
+
+            // Show loading state
+            const originalText = btn.innerHTML;
+            btn.innerHTML = `<svg class="w-3 h-3 animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+            </svg>`;
+            btn.disabled = true;
+
+            try {
+                const response = await fetch('/api/shorten-url', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ url: url })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    // Show shortened URL
+                    const shortSection = document.getElementById(elementId + 'Short');
+                    const shortText = document.getElementById(elementId + 'ShortText');
+                    
+                    shortText.textContent = result.shortUrl;
+                    shortSection.classList.remove('hidden');
+                    
+                    // Show success state
+                    btn.innerHTML = `<svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20,6 9,17 4,12"/>
+                    </svg>`;
+                    btn.classList.add('bg-emerald-500/20', 'text-emerald-400');
+                    
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.classList.remove('bg-emerald-500/20', 'text-emerald-400');
+                        btn.disabled = false;
+                    }, 3000);
+                } else {
+                    throw new Error(result.error || 'Không thể rút gọn link');
+                }
+            } catch (error) {
+                console.error('Error shortening URL:', error);
+                
+                // Show error state
+                btn.innerHTML = '❌ Lỗi';
+                btn.classList.add('bg-red-500/20', 'text-red-400');
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.remove('bg-red-500/20', 'text-red-400');
+                    btn.disabled = false;
+                }, 3000);
+            }
+        }
+
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            if (!element) {
+                console.error('Element not found:', elementId);
+                alert('Không thể copy: element không tồn tại');
+                return;
+            }
+            
+            const text = element.value || element.textContent;
+            if (!text) {
+                console.error('No text to copy from element:', elementId);
+                alert('Không có text để copy');
+                return;
+            }
+            
+            // Try modern clipboard API first
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showCopySuccess();
+                }).catch(err => {
+                    console.error('Clipboard API failed:', err);
+                    fallbackCopy(text);
+                });
+            } else {
+                // Fallback for older browsers
+                fallbackCopy(text);
+            }
+            
+            function showCopySuccess() {
+                const btn = event.target.closest('button');
+                if (btn) {
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = `<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20,6 9,17 4,12"/>
+                    </svg>`;
+                    btn.classList.add('bg-emerald-500', 'hover:bg-emerald-400');
+                    
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.classList.remove('bg-emerald-500', 'hover:bg-emerald-400');
+                    }, 1000);
+                }
+                
+                // Show toast notification
+                showToast('✅ Đã copy link!');
+            }
+            
+            function fallbackCopy(text) {
+                // Create temporary textarea
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                textarea.style.position = 'fixed';
+                textarea.style.opacity = '0';
+                document.body.appendChild(textarea);
+                textarea.select();
+                
+                try {
+                    const successful = document.execCommand('copy');
+                    if (successful) {
+                        showCopySuccess();
+                    } else {
+                        throw new Error('Copy command failed');
+                    }
+                } catch (err) {
+                    console.error('Fallback copy failed:', err);
+                    // Manual copy prompt as last resort
+                    prompt('Copy link này:', text);
+                } finally {
+                    document.body.removeChild(textarea);
+                }
+            }
+        }
+        
+        function showToast(message) {
+            // Create toast element
+            const toast = document.createElement('div');
+            toast.className = 'fixed top-4 right-4 bg-emerald-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 transition-all duration-300 transform translate-x-full';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            
+            // Animate in
+            setTimeout(() => {
+                toast.classList.remove('translate-x-full');
+            }, 100);
+            
+            // Animate out and remove
+            setTimeout(() => {
+                toast.classList.add('translate-x-full');
+                setTimeout(() => {
+                    if (document.body.contains(toast)) {
+                        document.body.removeChild(toast);
+                    }
+                }, 300);
+            }, 2000);
+        }
+
+        function openInstallPage() {
+            if (!currentData) return;
+            const installPageUrl = `${window.location.origin}/${currentData.fileId}`;
+            window.open(installPageUrl, '_blank');
+        }
+
+    </script>
 </body>
 </html>
