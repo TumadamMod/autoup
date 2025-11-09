@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tut Rip Page Fb</title>
+<style>
+  :root {
+    --bg: #0e1422;
+    --text: #b6f3d3;
+    --accent: #00e88f;
+  }
+
+  body {
+    margin: 0;
+    height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Fira Code", "JetBrains Mono", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .terminal {
+    background: #111827;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    width: 90%;
+    max-width: 700px;
+    height: 85vh;
+    padding: 20px 30px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mac {
+    position: absolute;
+    top: 12px;
+    left: 14px;
+    display: flex;
+    gap: 8px;
+  }
+  .mac span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  .red { background: #ff5f56; }
+  .yellow { background: #ffbd2e; }
+  .green { background: #27c93f; }
+
+  .title {
+    text-align: center;
+    margin-top: 18px;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--accent);
+    letter-spacing: 0.4px;
+    text-shadow: 0 0 6px rgba(0,232,143,0.16);
+  }
+
+  /* output area (thay pre bằng div để hiển thị nhiều line linh hoạt) */
+  #output {
+    margin-top: 30px;
+    font-size: 15px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-y: auto;
+    flex: 1;
+    padding-right: 8px;
+    padding-left: 6px;
+  }
+
+  #output::-webkit-scrollbar {
+    width: 6px;
+  }
+  #output::-webkit-scrollbar-thumb {
+    background: rgba(0, 232, 143, 0.25);
+    border-radius: 4px;
+  }
+
+  .line {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(6px);
+    animation: fadeInUp 0.28s forwards;
+    margin-bottom: 6px;
+    word-break: break-word;
+  }
+
+  .arrow {
+    color: var(--accent);
+    margin-right: 10px;
+    flex: 0 0 20px;
+    font-weight: 700;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background: var(--accent);
+    margin-left: 6px;
+    animation: blink 1s infinite;
+    align-self: flex-start;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  /* responsive nhỏ */
+  @media (max-width: 420px) {
+    .terminal { padding: 14px; height: 90vh; }
+    .title { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+  <div class="terminal">
+    <div class="mac">
+      <span class="red"></span>
+      <span class="yellow"></span>
+      <span class="green"></span>
+    </div>
+
+    <div class="title">Tut Rip Page Fb</div>
+    <div id="output" aria-live="polite"></div>
+  </div>
+
+<script>
+/*
+  Ghi chú thay đổi:
+  - Dùng template literal (`...`) cho chuỗi multiline.
+  - Tách thành từng dòng bằng .split('\\n') để gõ từng dòng riêng biệt.
+  - Giảm tốc độ gõ cho dễ đọc (typingDelay).
+  - Thêm pause giữa dòng và phần cuối có con trỏ nhấp nháy.
+*/
+
+const skinsText = `- Tut Rip Page Facebook By Tumadam
+- Share Cần Cre:
+B1: Chuẩn Bị 1 Phần Mềm Để Fake IP (Khuyên Dùng HMA Nếu Có Điều Kiện, Không Có Thì Dùng VPN/Proxy/OvpnSpider Pro)
+B2: Chuẩn Bị 1 Clone Page Để DAME (Page KHÔNG Phải Acc FB)
+B3: Lấy Ảnh, Ảnh Nền, Tiểu Sử Fake (iChang)
+B4: Sau Khi Fake Xong Vào App Fake IP Tìm Japan, Sau Đó Fake IP. Tiếp Đến Copy Link FB Acc Clone Để DAME, Dán Vô Note
+B5: Fake IP Xong Vô FB, NGÂM 5 Phút
+B6: DAME Nhấp Như Sau:
+  + Thông Tin Về Trang Này --> Trang Giả --> Tôi --> Dán URL Page Acc Dùng Để DAME Vừa Copy
+  + Thông Tin Về Trang Này --> Trang Giả --> Một Người Nổi Tiếng --> Dán URL Page AE Dùng Để DAME
+  + Thông Tin Về Trang Này --> Bắt Nạt, Quấy Rối,... --> Bắt Bạt Quấy Rối --> Tôi
+Sau Khi Nhấp Xong AE treo FB (Không Tắt App, Không Tắt IP). Để Đó Tầm 10-15P Vô Check Là Bay.
+- Nếu Acc Không Bay Có Khả Năng Từng Bị DAME Rồi
+- Nên DAME Trên FB Chrome HOẶC PC Sẽ Mượt Hơn`;
+
+const lines = skinsText.split('\n'); // tách theo dòng
+
+const output = document.getElementById('output');
+
+// cấu hình tốc độ (ms)
+const typingDelay = 1;   // thời gian giữa mỗi ký tự (ms)
+const linePause = 220;    // pause giữa các dòng (ms)
+
+function createLineElement() {
+  const line = document.createElement('div');
+  line.className = 'line';
+  line.innerHTML = `<span class="arrow">➜</span><span class="text"></span>`;
+  return line;
+}
+
+function scrollToBottom() {
+  // smooth scroll little bit (immediate)
+  output.scrollTop = output.scrollHeight;
+}
+
+async function typeLine(text) {
+  return new Promise(resolve => {
+    const line = createLineElement();
+    output.appendChild(line);
+    const textEl = line.querySelector('.text');
+    let i = 0;
+
+    const t = setInterval(() => {
+      textEl.textContent = text.slice(0, i++);
+      scrollToBottom();
+      if (i > text.length) {
+        clearInterval(t);
+        resolve();
+      }
+    }, typingDelay);
+  });
+}
+
+async function start() {
+  for (let i = 0; i < lines.length; i++) {
+    const txt = lines[i].trimRight();
+    // nếu dòng rỗng, chèn một dòng rỗng nhanh
+    if (txt === '') {
+      const blank = createLineElement();
+      blank.querySelector('.text').textContent = '';
+      output.appendChild(blank);
+      scrollToBottom();
+      await new Promise(r => setTimeout(r, linePause));
+      continue;
+    }
+    await typeLine(txt);
+    await new Promise(r => setTimeout(r, linePause));
+  }
+
+  // tạo con trỏ nhấp nháy ở cuối
+  const cursor = document.createElement('span');
+  cursor.className = 'cursor';
+  output.appendChild(cursor);
+  scrollToBottom();
+}
+
+start();
+</script>
+</body>
+</html>
