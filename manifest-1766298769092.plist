@@ -11,14 +11,14 @@
           <key>kind</key>
           <string>software-package</string>
           <key>url</key>
-          <string>https://github.com/TumadamMod/lqmmodskinvios1.0/releases/download/aovmod/Lien.Quan.Mobile_1.60.11505108_1766152176.ipa</string>
+          <string>https://github.com/TumadamMod/lqmmodskinvios1.0/releases/download/aovmod/CT435RhRcpe9lDN3.ipa</string>
         </dict>
         
       </array>
       <key>metadata</key>
       <dict>
         <key>bundle-identifier</key>
-        <string>com.tumadam.game.kgvn006</string>
+        <string>com.tumadam.game.kgvn00</string>
         <key>bundle-version</key>
         <string>1.60.11505108</string>
         <key>kind</key>
