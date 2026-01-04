@@ -11,7 +11,7 @@
           <key>kind</key>
           <string>software-package</string>
           <key>url</key>
-          <string>https://files.catbox.moe/fol2zn.ipa</string>
+          <string>https://certkhoindvn.cloud/DeltaVN.ipa</string>
         </dict>
         
       </array>
@@ -20,7 +20,7 @@
         <key>bundle-identifier</key>
         <string>com.deltavn.new</string>
         <key>bundle-version</key>
-        <string>2.702.613</string>
+        <string>2.702.633</string>
         <key>kind</key>
         <string>software</string>
         <key>title</key>
