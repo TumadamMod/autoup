@@ -18,9 +18,9 @@
       <key>metadata</key>
       <dict>
         <key>bundle-identifier</key>
-        <string>com.roblox.tumadam.deltavng</string>
+        <string>com.roblox.tumadam.ios</string>
         <key>bundle-version</key>
-        <string>2.711.871</string>
+        <string>2.715.871</string>
         <key>kind</key>
         <string>software</string>
         <key>title</key>
