@@ -5,51 +5,93 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>MOD SKIN FF IOS</title>
 <script>
+/* CHỐNG F12 / VIEW SOURCE / DEVTOOLS NÂNG CAO */
 (function () {
-    // Chặn phím tắt máy tính
-    document.addEventListener("keydown", function(e) {
-        if (
-            e.key === "F12" ||
-            (e.ctrlKey && e.shiftKey && ["I","J","C"].includes(e.key.toUpperCase())) ||
-            (e.ctrlKey && e.key.toUpperCase() === "U")
-        ) {
-            e.preventDefault();
-            return false;
-        }
-    });
 
-    // Chặn chuột phải
-    document.addEventListener("contextmenu", function(e) {
+"use strict";
+
+/* ===== CHẶN PHÍM ===== */
+document.addEventListener("keydown", function(e){
+    let k = e.key.toUpperCase();
+
+    if(
+        k === "F12" ||
+        (e.ctrlKey && e.shiftKey && ["I","J","C","K"].includes(k)) ||
+        (e.ctrlKey && ["U","S","P"].includes(k))
+    ){
         e.preventDefault();
-    });
-
-    // ===== CHỈ CHECK DEVTOOLS TRÊN PC =====
-    function isMobile() {
-        return /iPhone|iPad|iPod|Android|Mobile/i.test(navigator.userAgent);
+        e.stopPropagation();
+        return false;
     }
+}, true);
 
-    if (!isMobile()) {
-        setInterval(function () {
-            let widthDiff = window.outerWidth - window.innerWidth;
-            let heightDiff = window.outerHeight - window.innerHeight;
+/* ===== CHẶN CHUỘT PHẢI ===== */
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+    return false;
+}, true);
 
-            if (widthDiff > 180 || heightDiff > 180) {
-                document.body.innerHTML = `
-                <div style="
-                    background:#000;
-                    color:red;
-                    height:100vh;
-                    display:flex;
-                    justify-content:center;
-                    align-items:center;
-                    font-size:30px;
-                    font-weight:bold;
-                ">
-                PHÁT HIỆN DEVTOOLS ⚠️
-                </div>`;
-            }
-        }, 1500);
-    }
+/* ===== CHẶN KÉO THẢ / COPY ===== */
+["copy","cut","dragstart","selectstart"].forEach(function(ev){
+    document.addEventListener(ev,function(e){
+        e.preventDefault();
+        return false;
+    },true);
+});
+
+/* ===== PHÁT HIỆN DEVTOOLS CHỈ TRÊN PC ===== */
+function isMobile(){
+    return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+}
+
+if(!isMobile()){
+
+    let opened = false;
+
+    setInterval(function(){
+
+        let w = window.outerWidth - window.innerWidth > 170;
+        let h = window.outerHeight - window.innerHeight > 170;
+
+        const t = performance.now();
+        debugger;
+        const delay = performance.now() - t > 120;
+
+        if((w || h || delay) && !opened){
+            opened = true;
+
+            document.body.innerHTML = `
+            <div style="
+                position:fixed;
+                inset:0;
+                background:#000;
+                color:#ff0000;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                font-size:32px;
+                font-weight:bold;
+                z-index:999999;
+                text-align:center;
+                padding:20px;
+            ">
+            PHÁT HIỆN DEVTOOLS ⚠️
+            </div>`;
+        }
+
+    },1000);
+}
+
+/* ===== CHỐNG VIEW-SOURCE MỘT PHẦN ===== */
+if(location.href.startsWith("view-source:")){
+    location.replace("about:blank");
+}
+
+/* ===== XÓA CONSOLE ===== */
+setInterval(function(){
+    console.clear();
+},1000);
+
 })();
 </script>
 <style>
