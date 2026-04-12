@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MOD SKIN FF IOS</title>
+<!-- THÊM SCRIPT NÀY TRƯỚC </body> -->
+<script>
+// Chống F12 + Ctrl+Shift+I/J/C + Ctrl+U + Chuột phải
+(function () {
+    // Chặn phím tắt DevTools
+    document.addEventListener("keydown", function(e) {
+        if (
+            e.key === "F12" ||
+            (e.ctrlKey && e.shiftKey && ["I","J","C"].includes(e.key.toUpperCase())) ||
+            (e.ctrlKey && e.key.toUpperCase() === "U")
+        ) {
+            e.preventDefault();
+            alert("Không được mở DevTools!");
+            return false;
+        }
+    });
+
+    // Chặn chuột phải
+    document.addEventListener("contextmenu", function(e) {
+        e.preventDefault();
+        alert("Chuột phải đã bị khóa!");
+    });
+
+    // Phát hiện mở DevTools
+    setInterval(function () {
+        let widthThreshold = window.outerWidth - window.innerWidth > 160;
+        let heightThreshold = window.outerHeight - window.innerHeight > 160;
+
+        if (widthThreshold || heightThreshold) {
+            document.body.innerHTML = `
+                <div style="
+                    background:#000;
+                    color:red;
+                    height:100vh;
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    font-size:30px;
+                    font-weight:bold;
+                    text-align:center;
+                ">
+                    PHÁT HIỆN DEVTOOLS ⚠️
+                </div>
+            `;
+        }
+    }, 1000);
+})();
+</script>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#050505,#0f172a,#111827);
+color:#fff;
+overflow-x:hidden;
+}
+
+/* HEADER */
+.header{
+padding:22px;
+text-align:center;
+background:rgba(255,255,255,0.04);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(255,255,255,.08);
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.header h1{
+font-size:30px;
+font-weight:900;
+letter-spacing:2px;
+color:#facc15;
+text-shadow:0 0 10px rgba(255,255,0,.4);
+}
+
+/* GRID */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(165px,1fr));
+gap:18px;
+padding:20px;
+max-width:1400px;
+margin:auto;
+}
+
+/* CARD */
+.card{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.07);
+border-radius:22px;
+padding:14px;
+text-align:center;
+backdrop-filter:blur(12px);
+transition:.3s;
+box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+.card:hover{
+transform:translateY(-6px) scale(1.02);
+box-shadow:0 15px 30px rgba(0,0,0,.55);
+}
+
+.icon{
+width:100%;
+height:230px;
+border-radius:18px;
+overflow:hidden;
+background:#111;
+}
+
+.icon img{
+width:100%;
+height:100%;
+object-fit:contain; /* GIỮ NGUYÊN ẢNH KHÔNG MẤT NHÂN VẬT */
+background:#000;
+}
+
+.card h3{
+font-size:16px;
+margin-top:12px;
+margin-bottom:10px;
+min-height:38px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-weight:700;
+}
+
+/* BUTTON */
+.btn{
+padding:12px;
+border-radius:40px;
+cursor:pointer;
+font-weight:800;
+font-size:15px;
+background:linear-gradient(45deg,#ef4444,#dc2626,#f87171);
+background-size:200% 200%;
+animation:move 3s infinite;
+transition:.25s;
+box-shadow:0 8px 18px rgba(255,0,0,.35);
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+@keyframes move{
+0%{background-position:0%}
+50%{background-position:100%}
+100%{background-position:0%}
+}
+
+.footer{
+text-align:center;
+padding:30px;
+color:#aaa;
+font-size:14px;
+}
+
+@media(max-width:600px){
+.header h1{font-size:23px;}
+.icon{height:210px;}
+.cards{grid-template-columns:repeat(2,1fr);}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+<h1>🔥 MOD SKIN FF IOS 🔥</h1>
+</div>
+
+<div class="cards">
+
+<!-- CARD 1 -->
+<div class="card">
+<div class="icon"><img src="https://cdn.phototourl.com/free/2026-04-11-c638fd8b-aa7a-40c2-a90a-ad9e8fb4b0cf.jpg"></div>
+<h3>ALOK</h3>
+<div class="btn" onclick="download('https://www.mediafire.com/file/8bb8kpkeceogfbv/MOD+VIP+IOS+.zip/file')">TẢI NGAY</div>
+</div>
+
+<!-- CARD 2 -->
+<div class="card">
+<div class="icon"><img src="https://cdn.phototourl.com/free/2026-04-11-c0445b54-f5ee-4dc7-bba3-8cbc61f58370.jpg"></div>
+<h3>ALOK</h3>
+<div class="btn" onclick="download('https://www.mediafire.com/file/pvskq8is2a7c0fa/MOD+VIP+IOS+++++++.zip/file')">TẢI NGAY</div>
+</div>
+
+<!-- CARD 3 -->
+<div class="card">
+<div class="icon"><img src="https://cdn.phototourl.com/free/2026-04-11-d09a55d3-e753-4f52-ba71-f4db5aed6d76.jpg"></div>
+<h3>ALOK</h3>
+<div class="btn" onclick="download('https://www.mediafire.com/file/cfgq8bng695f7v4/MOD+SKIN+VIP+IOS.zip/file')">TẢI NGAY</div>
+</div>
+
+<!-- CARD 4 -->
+<div class="card">
+<div class="icon"><img src="https://cdn.phototourl.com/free/2026-04-11-990b812a-13bb-4843-be2f-0f27f6d5e35f.jpg"></div>
+<h3>ALOK</h3>
+<div class="btn" onclick="download('https://www.mediafire.com/file/mxh2r6iivcslzua/MOD+VIP+IOS+.zip/file')">TẢI NGAY</div>
+</div>
+
+<!-- CARD 5 -->
+<div class="card">
+<div class="icon"><img src="https://cdn.phototourl.com/member/2026-04-11-925f8abe-8a91-4066-8ec9-197f17f621bf.jpg"></div>
+<h3>ALOK</h3>
+<div class="btn" onclick="download('https://www.mediafire.com/file/sme66ylqgguk17y/MOD+VIP+IOS+.zip/file')">TẢI NGAY</div>
+</div>
+
+<!-- CARD 6 -->
+<div class="card">
+<div class="icon"><img src="https://cdn.phototourl.com/free/2026-04-11-02669507-7df2-4cb7-957f-db8087725385.jpg"></div>
+<h3>ALOK</h3>
+<div class="btn" onclick="download('https://www.mediafire.com/file/dno9x8vqh4zyzxh/MOD+VIP+IOS.zip/file')">TẢI NGAY</div>
+</div>
+
+<!-- CARD 7 -->
+<div class="card">
+<div class="icon"><img src="https://cdn.phototourl.com/free/2026-04-11-0f165fc3-6aa4-4650-af11-43207faf0b7a.jpg"></div>
+<h3>ALOK</h3>
+<div class="btn" onclick="download('https://www.mediafire.com/file/wktexbc96q9djzh/MOD+VIP+IOS+.zip/file')">TẢI NGAY</div>
+</div>
+
+<!-- CARD 8 -->
+<div class="card">
+<div class="icon"><img src="https://cdn.phototourl.com/member/2026-04-11-ce7c330f-dc98-428b-b5e5-dc82308ae101.jpg"></div>
+<h3>ALOK</h3>
+<div class="btn" onclick="download('https://www.mediafire.com/file/e7qsbospv79mar9/Duy+Pháp.zip/file')">TẢI NGAY</div>
+</div>
+
+<!-- CARD 9 -->
+<div class="card">
+<div class="icon"><img src="https://cdn.phototourl.com/member/2026-04-11-399753e4-3e5c-4a1d-96eb-363c7b8f03f9.jpg"></div>
+<h3>ALOK</h3>
+<div class="btn" onclick="download('https://www.mediafire.com/file/qkiu80fq4nh69ep/KEN_MOD_Z_V48_AO_LEVI_QUAN_NGU_FF_THUONG_IOS.zip/file')">TẢI NGAY</div>
+</div>
+
+<!-- CARD 10 -->
+<div class="card">
+<div class="icon"><img src="https://cdn.phototourl.com/member/2026-04-11-cc39d0a0-4bb9-4951-b820-a77ca1953464.jpg"></div>
+<h3>ALOK</h3>
+<div class="btn" onclick="download('https://www.mediafire.com/file/8pu2bqfk1h77cjv/mod+skin+by+@Daury+Modec.zip/file')">TẢI NGAY</div>
+</div>
+
+<!-- CARD 11 -->
+<div class="card">
+<div class="icon"><img src="https://cdn.phototourl.com/member/2026-04-11-be2fb759-1374-465e-b773-2e07c02357a2.png"></div>
+<h3>ALOK</h3>
+<div class="btn" onclick="download('https://www.mediafire.com/file/sqk8sgnr2zpier2/Duy+Pháp.zip/file')">TẢI NGAY</div>
+</div>
+
+<!-- CARD 12 -->
+<div class="card">
+<div class="icon"><img src="https://cdn.phototourl.com/member/2026-04-11-5468fb63-5c83-41ad-91a8-40e541ec8670.jpg"></div>
+<h3>ALOK</h3>
+<div class="btn" onclick="download('https://www.mediafire.com/file/juow636fnmh4zc6/-MOD+VIP+IOS-+.zip/file')">TẢI NGAY</div>
+</div>
+
+<!-- CARD 13 -->
+<div class="card">
+<div class="icon"><img src="https://cdn.phototourl.com/member/2026-04-11-6a02f500-80fa-4dd5-bcb4-22ca0ce89b26.png"></div>
+<h3>ALOK</h3>
+<div class="btn" onclick="download('https://www.mediafire.com/file/rz44ln93a9pk69z/MOD+SKIN+RUOK+FF+IOS+FFTH.zip/file')">TẢI NGAY</div>
+</div>
+
+<!-- CARD 14 -->
+<div class="card">
+<div class="icon"><img src="https://cdn.phototourl.com/member/2026-04-11-5b78197c-0e81-4bcc-b631-af5df280e1e7.png"></div>
+<h3>ALOK</h3>
+<div class="btn" onclick="download('https://www.mediafire.com/file/ll7ml4iuif48obn/KEN_MOD_Z_V17_ALOK_MU_TIEU_TIEN_FF_THUONG_IOS.zip/file')">TẢI NGAY</div>
+</div>
+
+<!-- CARD 15 -->
+<div class="card">
+<div class="icon"><img src="https://cdn.phototourl.com/member/2026-04-11-2accbd5b-35d6-4777-bf0c-669918c866b8.png"></div>
+<h3>IGNIS</h3>
+<div class="btn" onclick="download('https://www.mediafire.com/file/pp9my7krkcu9uc7/KEN_MOD_Z_OB53_V4_IGNIS_AO_BRAZIL_NHAT_QUYEN_FF_THUONG_IOS.zip/file')">TẢI NGAY</div>
+</div>
+
+<!-- CARD 16 -->
+<div class="card">
+<div class="icon"><img src="https://cdn.phototourl.com/member/2026-04-11-1f0640fd-f9d9-4c76-99e5-d8ff4f5d2140.png"></div>
+<h3>IGNIS</h3>
+<div class="btn" onclick="download('https://www.mediafire.com/file/01zbkyemsszc5gx/KEN_MOD_Z_OB53_V4_IGNIS_AO_ARGENTINA_NHAT_QUYEN_FF_THUONG_IOS.zip/file')">TẢI NGAY</div>
+</div>
+
+<!-- CARD 17 -->
+<div class="card">
+<div class="icon"><img src="https://cdn.phototourl.com/member/2026-04-12-de349047-3185-4ac5-bd0d-0fde8b29a78a.png"></div>
+<h3>IGNIS</h3>
+<div class="btn" onclick="download('https://www.mediafire.com/file/99332zr6uk6d5qv/SAKURATEXTURAS.zip/file')">TẢI NGAY</div>
+</div>
+
+<!-- CARD 18 -->
+<div class="card">
+<div class="icon"><img src="https://cdn.phototourl.com/member/2026-04-12-59872603-e543-4d14-a8ef-092d7f0192c4.png"></div>
+<h3>ALOK</h3>
+<div class="btn" onclick="download('https://www.mediafire.com/file/qggdjvstrt5w7w3/gia+minh.zip/file')">TẢI NGAY</div>
+</div>
+
+<!-- CARD 19 -->
+<div class="card">
+<div class="icon"><img src="https://cdn.phototourl.com/member/2026-04-12-04e313e3-1b2d-4ec8-9e94-af90b23ce6f2.png"></div>
+<h3>ALOK</h3>
+<div class="btn" onclick="download('https://www.mediafire.com/file/mgwxxcpmr6tjz78/bộ+4.zip/file')">TẢI NGAY</div>
+</div>
+
+<!-- CARD 20 -->
+<div class="card">
+<div class="icon"><img src="https://cdn.phototourl.com/member/2026-04-12-c89ef076-b19b-4af0-a872-b28bb0327b68.png"></div>
+<h3>ALOK</h3>
+<div class="btn" onclick="download('https://www.mediafire.com/file/0xw3bhtxknb6lt6/bộ+1.zip/file')">TẢI NGAY</div>
+</div>
+
+<!-- CARD 21 -->
+<div class="card">
+<div class="icon"><img src="https://cdn.phototourl.com/member/2026-04-12-99983034-8019-46bf-a26c-1472071c5ffd.jpg"></div>
+<h3>AWM [ Phong Xà ]</h3>
+<div class="btn" onclick="download('https://www.mediafire.com/file/dvcz5l5pgbew2co/Awm+hoả+băng+px+by+@chip_crack.zip/file')">TẢI NGAY</div>
+</div>
+
+<!-- CARD 22 -->
+<div class="card">
+<div class="icon"><img src="https://cdn.phototourl.com/member/2026-04-12-72ca27ee-64e9-4d4b-a12b-3a8d5f735b6d.jpg"></div>
+<h3>M1887 [ Phong Xà ]</h3>
+<div class="btn" onclick="download('https://www.mediafire.com/file/xk47ljm1w383tri/SHOT7+IOS+.zip/file')">TẢI NGAY</div>
+</div>
+
+</div>
+
+<div class="footer">
+
+</div>
+
+<script>
+function download(url){
+window.location.href=url;
+}
+</script>
+
+</body>
+</html>
