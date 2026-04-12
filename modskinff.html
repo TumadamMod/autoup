@@ -4,11 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>MOD SKIN FF IOS</title>
-<!-- THÊM SCRIPT NÀY TRƯỚC </body> -->
 <script>
-// Chống F12 + Ctrl+Shift+I/J/C + Ctrl+U + Chuột phải
 (function () {
-    // Chặn phím tắt DevTools
+    // Chặn phím tắt máy tính
     document.addEventListener("keydown", function(e) {
         if (
             e.key === "F12" ||
@@ -16,7 +14,6 @@
             (e.ctrlKey && e.key.toUpperCase() === "U")
         ) {
             e.preventDefault();
-            alert("Không được mở DevTools!");
             return false;
         }
     });
@@ -24,16 +21,20 @@
     // Chặn chuột phải
     document.addEventListener("contextmenu", function(e) {
         e.preventDefault();
-        alert("Chuột phải đã bị khóa!");
     });
 
-    // Phát hiện mở DevTools
-    setInterval(function () {
-        let widthThreshold = window.outerWidth - window.innerWidth > 160;
-        let heightThreshold = window.outerHeight - window.innerHeight > 160;
+    // ===== CHỈ CHECK DEVTOOLS TRÊN PC =====
+    function isMobile() {
+        return /iPhone|iPad|iPod|Android|Mobile/i.test(navigator.userAgent);
+    }
 
-        if (widthThreshold || heightThreshold) {
-            document.body.innerHTML = `
+    if (!isMobile()) {
+        setInterval(function () {
+            let widthDiff = window.outerWidth - window.innerWidth;
+            let heightDiff = window.outerHeight - window.innerHeight;
+
+            if (widthDiff > 180 || heightDiff > 180) {
+                document.body.innerHTML = `
                 <div style="
                     background:#000;
                     color:red;
@@ -43,13 +44,12 @@
                     align-items:center;
                     font-size:30px;
                     font-weight:bold;
-                    text-align:center;
                 ">
-                    PHÁT HIỆN DEVTOOLS ⚠️
-                </div>
-            `;
-        }
-    }, 1000);
+                PHÁT HIỆN DEVTOOLS ⚠️
+                </div>`;
+            }
+        }, 1500);
+    }
 })();
 </script>
 <style>
