@@ -4,45 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>MOD SKIN FF IOS</title>
-<script>
-    // 1. Chặn click chuột phải (Context Menu)
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-    });
-
-    // 2. Chặn các phím tắt phổ biến dùng để xem code
-    document.onkeydown = function(e) {
-        // Chặn phím F12
-        if (e.keyCode === 123) {
-            e.preventDefault();
-            return false;
-        }
-        
-        // Chặn Ctrl + Shift + I (Mở Developer Tools trên Chrome/Edge/Firefox)
-        if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
-            e.preventDefault();
-            return false;
-        }
-        
-        // Chặn Ctrl + Shift + J (Mở Console)
-        if (e.ctrlKey && e.shiftKey && e.keyCode === 74) {
-            e.preventDefault();
-            return false;
-        }
-        
-        // Chặn Ctrl + U (View Page Source)
-        if (e.ctrlKey && e.keyCode === 85) {
-            e.preventDefault();
-            return false;
-        }
-
-        // Chặn Ctrl + S (Lưu trang web)
-        if (e.ctrlKey && e.keyCode === 83) {
-            e.preventDefault();
-            return false;
-        }
-    };
-</script>
 
 <style>
 *{
