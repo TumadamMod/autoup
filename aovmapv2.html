@@ -1,22 +1,48 @@
 <!doctype html>
-<html lang="vi">
+<html lang="vi" data-theme="dark">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <title>Aov Cheat</title>
 
 <style>
-:root{
-  --purple:#8b5cf6;
-  --pink:#ec4899;
-  --cyan:#22d3ee;
-  --bg:#05060a;
-  --card:#0c1020;
-  --text:#e5e7eb;
-  --muted:#9ca3af;
+/* BIẾN CSS CHO THEME (DARK / LIGHT) */
+:root {
+  --purple: #8b5cf6;
+  --pink: #ec4899;
+  
+  /* Mặc định là Dark Mode */
+  --bg: #05060a;
+  --card-bg: linear-gradient(180deg, #0f142c, #090c1b);
+  --card-border: rgba(139,92,246, 0.25);
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --appbar-bg: rgba(12,16,32, 0.85);
+  --card-shadow: 0 0 30px rgba(139,92,246, 0.15);
+  --glow-purple: 0 0 25px rgba(139,92,246, 0.6);
+  --glow-pink: 0 0 35px rgba(236,72,153, 0.4);
+  --input-bg: linear-gradient(180deg, #11183a, #0b0f22);
+  --heading-glow: #c4b5fd;
+  --note-text: #fca5a5;
+  --btn-copy-bg: rgba(139,92,246, 0.15);
+  --btn-copy-color: #c4b5fd;
+}
 
-  --glow-purple:0 0 25px rgba(139,92,246,.6);
-  --glow-pink:0 0 35px rgba(236,72,153,.4);
+[data-theme="light"] {
+  --bg: #f3f4f6;
+  --card-bg: #ffffff;
+  --card-border: #d1d5db;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --appbar-bg: rgba(255, 255, 255, 0.85);
+  --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  --glow-purple: none;
+  --glow-pink: none;
+  --input-bg: #f9fafb;
+  --heading-glow: #7c3aed;
+  --note-text: #ef4444;
+  --btn-copy-bg: #f3f4f6;
+  --btn-copy-color: #7c3aed;
 }
 
 *{box-sizing:border-box}
@@ -24,54 +50,62 @@ html,body{
   height:100%;
   margin:0;
   font-family:-apple-system,"SF Pro Text","Segoe UI",Roboto,Arial;
-  background:
-    radial-gradient(1200px 600px at 20% -10%,rgba(139,92,246,.18),transparent 40%),
-    radial-gradient(800px 400px at 90% 10%,rgba(34,211,238,.12),transparent 40%),
-    var(--bg);
-  color:var(--text);
+  background-color: var(--bg);
+  background-image: 
+    radial-gradient(1200px 600px at 20% -10%, rgba(139,92,246,0.12), transparent 40%),
+    radial-gradient(800px 400px at 90% 10%, rgba(34,211,238,0.08), transparent 40%);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 a{color:inherit;text-decoration:none}
 
 /* Appbar */
 .appbar{
   position:sticky;top:0;
-  background:rgba(12,16,32,.85);
+  background: var(--appbar-bg);
   backdrop-filter:blur(10px);
-  border-bottom:1px solid rgba(139,92,246,.25);
+  border-bottom:1px solid var(--card-border);
   z-index:40;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 .appbar-inner{
   max-width:980px;margin:0 auto;padding:12px 16px;
-  display:flex;align-items:center;gap:12px
+  display:flex;align-items:center;justify-content:space-between;
+}
+.appbar-left {
+  display:flex;align-items:center;gap:12px;
 }
 .appstore-icon-wrap{
-  width:28px;
-  height:28px;
-  border-radius:7px;          /* bo góc kiểu iOS */
-  overflow:hidden;            /* cắt phần trắng thừa */
-  background:#000;            /* nền dự phòng */
-  flex:0 0 auto;
+  width:28px;height:28px;border-radius:7px;
+  overflow:hidden;background:#000;flex:0 0 auto;
   box-shadow:0 0 8px rgba(139,92,246,.4);
 }
-
-.appstore-icon{
-  width:100%;
-  height:100%;
-  object-fit:cover;           /* zoom cho kín khung */
-  display:block;
-}
+.appstore-icon{width:100%;height:100%;object-fit:cover;display:block;}
 .appbar-title{font-weight:800;font-size:18px}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: transparent; border: none; cursor: pointer;
+  color: var(--text); padding: 4px; display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; transition: background 0.2s;
+}
+.theme-toggle:hover { background: rgba(139,92,246,0.15); }
+.theme-toggle svg { width: 22px; height: 22px; }
+.sun-icon { display: none; }
+.moon-icon { display: block; }
+[data-theme="light"] .sun-icon { display: block; }
+[data-theme="light"] .moon-icon { display: none; }
 
 /* Layout */
 .container{max-width:980px;margin:0 auto;padding:16px 16px 90px}
 
 .card{
-  background:linear-gradient(180deg,#0f142c,#090c1b);
-  border-radius:22px;
-  padding:16px;
-  border:1px solid rgba(139,92,246,.25);
-  box-shadow:0 0 30px rgba(139,92,246,.15);
+  background: var(--card-bg);
+  border-radius:22px; padding:16px;
+  border:1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
   margin-bottom:18px;
+  transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
 /* HERO */
@@ -82,16 +116,14 @@ a{color:inherit;text-decoration:none}
   background:linear-gradient(135deg,var(--purple),var(--pink));
   padding:3px;flex:0 0 auto;
 }
-.app-icon{
-  width:100%;height:100%;border-radius:20px;object-fit:cover;background:#000;
-}
+.app-icon{width:100%;height:100%;border-radius:20px;object-fit:cover;background:#000;}
 .hero-info{flex:1;min-width:0}
 .app-name{font-size:26px;font-weight:900;margin:0 0 8px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px;}
 .badge{padding:6px 12px;border-radius:999px;font-weight:800;font-size:14px;}
 .badge.orange{background:#ffd7b5;color:#9a4b00;}
 .badge.gray{background:#9ca3af;color:#111827;}
-.version-row{display:flex;align-items:center;gap:10px;color:#c7d2fe;font-weight:800;}
+.version-row{display:flex;align-items:center;gap:10px;color:var(--heading-glow);font-weight:800;}
 .dot{width:12px;height:12px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px rgba(34,197,94,.8);}
 
 .hero-action{margin-top:16px;}
@@ -106,15 +138,6 @@ a{color:inherit;text-decoration:none}
   box-shadow:var(--glow-purple),var(--glow-pink);
   color:#fff;
 }
-.tele-link{
-    color: #007bff; /* màu xanh */
-    font-weight: bold; /* chữ đậm */
-    text-decoration: none; /* bỏ gạch chân nếu muốn */
-}
-
-.tele-link:hover{
-    text-decoration: underline; /* hover cho dễ nhận biết */
-}
 
 /* iOS loader */
 .install-circle{width:22px;height:22px;display:none}
@@ -127,100 +150,106 @@ a{color:inherit;text-decoration:none}
 
 /* Screenshots */
 .section-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-.section-head h2{margin:0;font-size:18px;font-weight:900;color:#c4b5fd;text-shadow:var(--glow-purple)}
+.section-head h2{margin:0;font-size:18px;font-weight:900;color:var(--heading-glow);text-shadow:var(--glow-purple)}
 .screenshot-list{display:flex;gap:14px;overflow-x:auto;padding:6px 2px 10px;list-style:none;margin:0}
 .screenshot-list li{flex:0 0 auto;width:82%;max-width:640px}
-.screenshot-list img{width:100%;border-radius:14px;box-shadow:0 0 30px rgba(139,92,246,.25);display:block;object-fit:cover;background:#000}
+.screenshot-list img{width:100%;border-radius:14px;box-shadow:var(--card-shadow);display:block;object-fit:cover;background:#000}
 
 /* Gallery 9:16 */
-.gallery-heading{font-size:26px;text-align:center;color:#c4b5fd;font-weight:900;text-shadow:var(--glow-purple);margin:10px 0 14px}
+.gallery-heading{font-size:26px;text-align:center;color:var(--heading-glow);font-weight:900;text-shadow:var(--glow-purple);margin:10px 0 14px}
 .gallery-scroll{display:flex;gap:12px;overflow-x:auto;padding:6px 2px 10px}
-.gallery-item{flex:0 0 70%;max-width:320px;aspect-ratio:9/16;border-radius:14px;overflow:hidden;box-shadow:0 0 30px rgba(236,72,153,.25);background:#000}
+.gallery-item{flex:0 0 70%;max-width:320px;aspect-ratio:9/16;border-radius:14px;overflow:hidden;box-shadow:0 0 20px rgba(236,72,153,.15);background:#000}
 .gallery-item img{width:100%;height:100%;object-fit:cover;display:block}
 
 /* Text */
-.lead-text{color:var(--muted);line-height:1.6}
+.lead-text{color:var(--muted);line-height:1.6; margin-top:0; margin-bottom: 8px;}
 .lead-text a{color:#38bdf8;font-weight:900;text-decoration:underline}
 
 /* Footer */
 .footer{padding:20px 0;text-align:center;color:var(--muted);font-weight:600}
 .footer a{color:#f472b6;font-weight:900}
 
-/* ===== POPUP CHỌN CÁCH TẢI ===== */
+/* ===== POPUP ===== */
 .download-modal{
   position:fixed;inset:0;
-  background:rgba(5,6,10,.75);
+  background:rgba(0,0,0,.6);
   backdrop-filter: blur(6px);
   display:none;align-items:center;justify-content:center;
   z-index:3000;
 }
 .download-box{
   width:90%;max-width:420px;
-  background:linear-gradient(180deg,#0f142c,#090c1b);
+  background:var(--card-bg);
   border-radius:24px;padding:20px;
-  border:1px solid rgba(139,92,246,.35);
-  box-shadow:0 0 30px rgba(139,92,246,.35);
+  border:1px solid var(--card-border);
+  box-shadow:var(--card-shadow);
 }
 .download-title{text-align:center;font-weight:900;font-size:20px;margin-bottom:16px;}
 .option{
-  background:linear-gradient(180deg,#11183a,#0b0f22);
+  background:var(--input-bg);
   border-radius:18px;padding:16px;margin-bottom:14px;
-  border:1px solid rgba(236,72,153,.35);
-  box-shadow:0 0 20px rgba(236,72,153,.25);
+  border:1px solid var(--card-border);
 }
-.option h3{margin:0 0 6px;color:#f9a8d4;}
-.option p{margin:0 0 12px;color:#c7d2fe;font-size:14px;}
+.option h3{margin:0 0 6px;color:var(--heading-glow);}
+.option p{margin:0 0 12px;color:var(--muted);font-size:14px;}
 .option button{
   width:100%;padding:12px;border-radius:999px;border:none;
   background:linear-gradient(135deg,#8b5cf6,#ec4899);
   color:#fff;font-weight:900;font-size:16px;cursor:pointer;
-  box-shadow:0 0 20px rgba(139,92,246,.6),0 0 25px rgba(236,72,153,.4);
 }
-.close-popup{text-align:center;margin-top:6px;color:#9ca3af;cursor:pointer;font-weight:700;}
-.copy-box {
-    display: flex;
-    margin-top: 10px;
+.close-popup{text-align:center;margin-top:6px;color:var(--muted);cursor:pointer;font-weight:700;}
+
+/* PHÂN CÁCH */
+.divider {
+    height: 1px;
+    background: var(--card-border);
+    margin: 16px 0;
 }
 
-.copy-box {
-    display: flex;
-    margin-top: 12px;
-    background: linear-gradient(180deg,#11183a,#0b0f22);
+/* THIẾT KẾ LẠI PHẦN KEY (KEY BÊN DƯỚI TEXT) */
+.key-header {
+    margin-bottom: 8px;
+}
+.key-title {
+    margin: 0; font-size: 16px; font-weight: 900;
+    color: var(--heading-glow); text-shadow: var(--glow-purple);
+}
+.key-desc {
+    margin: 4px 0 0 0; font-size: 13px; color: var(--note-text); font-weight: 600;
+}
+
+.key-box-compact {
+    display: inline-flex;
+    align-items: center;
+    background: var(--input-bg);
+    border: 1px solid var(--card-border);
     border-radius: 12px;
-    border: 1px solid rgba(139,92,246,.35);
-    overflow: hidden;
+    padding: 4px 6px 4px 14px;
+    max-width: 100%;
 }
-
-.copy-box input {
-    flex: 1;
-    padding: 10px;
-    border: none;
+.key-box-compact input {
+    width: 160px;
     background: transparent;
-    color: #e5e7eb;
-    font-weight: 700;
-    outline: none;
-}
-
-.copy-box button {
-    padding: 10px 16px;
     border: none;
-    background: linear-gradient(135deg,#8b5cf6,#ec4899);
-    color: #fff;
-    font-weight: 900;
+    color: var(--text);
+    font-weight: 800;
+    font-size: 14px;
+    outline: none;
+    letter-spacing: 0.5px;
+}
+.btn-copy-sm {
+    display: flex; align-items: center; justify-content: center;
+    background: var(--btn-copy-bg);
+    color: var(--btn-copy-color);
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
     cursor: pointer;
-    box-shadow: 0 0 15px rgba(139,92,246,.5);
+    transition: all 0.2s;
 }
-
-.copy-box button:hover {
-    opacity: 0.9;
-}
-
-.note-text{
-    margin-top:10px;
-    font-size:14px;
-    color:#fca5a5;
-    font-weight:700;
-    text-align:center;
+.btn-copy-sm:hover {
+    background: linear-gradient(135deg, var(--purple), var(--pink));
+    color: #fff;
 }
 </style>
 </head>
@@ -228,10 +257,29 @@ a{color:inherit;text-decoration:none}
 
 <header class="appbar">
   <div class="appbar-inner">
-    <div class="appstore-icon-wrap">
-  <img class="appstore-icon" src="https://www.apple.com/v/app-store/c/images/overview/icon_appstore__ev0z770zyxoy_large_2x.png">
-</div>
-    <span class="appbar-title">AppStore</span>
+    <div class="appbar-left">
+        <div class="appstore-icon-wrap">
+            <img class="appstore-icon" src="https://www.apple.com/v/app-store/c/images/overview/icon_appstore__ev0z770zyxoy_large_2x.png">
+        </div>
+        <span class="appbar-title">AppStore</span>
+    </div>
+    
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
   </div>
 </header>
 
@@ -277,14 +325,31 @@ a{color:inherit;text-decoration:none}
                                 <li><img src="https://files.catbox.moe/bwkwqb.mov"></li>
   </ul>
 </div>
+
 <div class="card">
-<p class="lead-text"><b>- Update Menu Map(Full CN)</b></p>
+    <p class="lead-text"><b>- Update Menu Map(Full CN),Esp Không Dùng Đc</b></p>
     <p class="lead-text"><b>- Update Aim 1 Số Tướng(list aim trong menu)</b></p>
-        <p class="lead-text"><b>- Tab Tools Dành Cho Chơi Với Bot</b></p>
-                <p class="lead-text"><b>- Chơi Kín Tránh Bị Tố(Sẽ ban 1-3-7day)</b></p>
+    <p class="lead-text" style="margin-bottom: 0;"><b>- Chơi Kín Tránh Bị Tố(Sẽ ban 1-3-7day)</b></p>
+    
+    <div class="divider"></div>
+
+    <div class="key-container">
+        <div class="key-header">
+            <h3 class="key-title">Key Free 12H Test</h3>
+            <p class="key-desc">Chỉ dùng 1 lần/thiết bị!</p>
+        </div>
+        
+        <div class="key-box-compact">
+            <input type="text" id="copyText" value="tumadam-hour-wiv20IVDPV9vz3hG" readonly>
+            <button class="btn-copy-sm" onclick="copyText(this)" title="Sao chép">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
 </div>
-
-
 
 <div class="card" id="huongdan">
   <div class="gallery-heading">Hướng Dẫn Tin Cậy</div>
@@ -301,7 +366,6 @@ a{color:inherit;text-decoration:none}
 
 </main>
 
-<!-- POPUP -->
 <div class="download-modal" id="downloadModal">
   <div class="download-box">
     <div class="download-title">HÃY CHỌN CÁCH TẢI</div>
@@ -323,8 +387,24 @@ a{color:inherit;text-decoration:none}
 </div>
 
 <script>
+/* ======= DARK / LIGHT MODE TOGGLE ======= */
+const themeToggle = document.getElementById('themeToggle');
+const htmlElement = document.documentElement;
+
+const savedTheme = localStorage.getItem('appTheme') || 'dark';
+htmlElement.setAttribute('data-theme', savedTheme);
+
+themeToggle.addEventListener('click', () => {
+    const currentTheme = htmlElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    htmlElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('appTheme', newTheme);
+});
+
+/* ======= CÀI ĐẶT & POPUP ======= */
 const DIRECT_LINK = "itms-services://?action=download-manifest&url=https://Tumadammod.github.io/autoup/manifest-aovmapv2.plist";
-const IPA_LINK = "https://dl.ipas.cc/ipas/82k69h.ipa";
+const IPA_LINK = "https://dl.ipas.cc/ipas/8emf9x.ipa";
 
 const installBtn = document.getElementById('installBtn');
 const modal = document.getElementById('downloadModal');
@@ -347,16 +427,10 @@ function startLoadingAndGo(url){
 }
 
 function installDirect(){
-  // Đóng popup
   modal.style.display = 'none';
-
-  // Bật loading trên nút chính
   installBtn.classList.add('loading');
-
-  // Mở link cài ngay
   window.location.href = DIRECT_LINK;
 
-  // Tự cuộn xuống phần hướng dẫn tin cậy
   const guide = document.getElementById('huongdan');
   if(guide){
     setTimeout(()=>{
@@ -364,7 +438,6 @@ function installDirect(){
     }, 3000);
   }
 
-  // Sau 2 giây thì tắt loading, về nút ban đầu
   setTimeout(()=>{
     installBtn.classList.remove('loading');
   }, 2000);
@@ -373,13 +446,29 @@ function installDirect(){
 function installIPA(){
   startLoadingAndGo(IPA_LINK);
 }
-</script>
-<script>
-function copyText() {
-    var text = document.getElementById("copyText").value;
 
-    navigator.clipboard.writeText(text).then(function() {
-        alert("✅ Đã copy key!");
+/* ======= CHỨC NĂNG SAO CHÉP (UPDATE HIỆU ỨNG TÍCH) ======= */
+// Khai báo sẵn 2 dạng icon SVG
+const copySvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>`;
+const checkSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
+
+function copyText(btn) {
+    var copyInput = document.getElementById("copyText");
+    
+    copyInput.select();
+    copyInput.setSelectionRange(0, 99999); 
+
+    navigator.clipboard.writeText(copyInput.value).then(function() {
+        // Đổi icon trong nút thành Dấu Tích Xanh
+        btn.innerHTML = checkSvg;
+        
+        // Đợi 2 giây sau đó đổi về Icon Copy ban đầu
+        setTimeout(function() {
+            btn.innerHTML = copySvg;
+        }, 2000);
+        
+    }).catch(function(err) {
+        alert("❌ Lỗi khi sao chép!");
     });
 }
 </script>
