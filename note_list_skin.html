@@ -1,3 +1,4 @@
+// Lấy Code Nhớ Cre Nhé Thk Lồn
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -146,8 +147,8 @@
   </div>
 
 <script>
-let typingInterval = null;      // interval đang gõ
-let stopTyping = false;         // flag để ngăn chạy tiếp
+let typingInterval = null;      
+let stopTyping = false;         
 
 const tabData = {
   1: [
@@ -198,19 +199,19 @@ function typeLine(text, delay = 1.0) {
 
 async function runTab(tabID) {
 
-  stopTyping = true;          // dừng tác vụ gõ cũ  
+  stopTyping = true;          
   clearInterval(typingInterval);
 
-  await new Promise(r => setTimeout(r, 50)); // chờ dừng
+  await new Promise(r => setTimeout(r, 50)); 
 
-  stopTyping = false;         // cho phép chạy task mới
+  stopTyping = false;         
   output.innerHTML = "";
 
   const lines = tabData[tabID];
 
   for (let i = 0; i < lines.length; i++) {
 
-    if (stopTyping) break;    // đảm bảo không bị chạy sót
+    if (stopTyping) break;    
 
     await typeLine(lines[i]);
     await new Promise(r => setTimeout(r, 20));
